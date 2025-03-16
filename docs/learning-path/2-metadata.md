@@ -26,5 +26,4 @@ Metadata allows users to **filter, sort, and search for documents dynamically**,
 
 This method improves searchability, reduces duplication, and ensures that everyone in the organization is accessing **the most up-to-date version** of a document without confusion.
 
-
-## 5 Document Sets: A Smarter Alternative to Folders
+**Next** [3. Document Sets: A Smarter Alternative to Folders](3-document-sets.md)

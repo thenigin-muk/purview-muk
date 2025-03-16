@@ -38,4 +38,4 @@ This implementation follows an **incremental approach**, where phases **1 throug
 
 **By following these structured steps, the organization will transition seamlessly into a modern, automated records retention and compliance system, reducing administrative burden while ensuring compliance and accessibility.**
 
-## Appendix A: Metadata Training and Reference Guide
+**Next** [7. Next Steps & Implementation](7-next-steps.md)

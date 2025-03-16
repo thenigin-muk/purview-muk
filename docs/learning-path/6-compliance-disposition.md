@@ -20,4 +20,4 @@ Imagine a scenario where a **public records request** is submitted regarding a v
 
 Microsoft Purview acts as the **banker’s box** of electronic records management—ensuring all documents are retained, discoverable, and **ready for audits or legal inquiries.**
 
-## 9 Next Steps & Implementation
+**Next** 

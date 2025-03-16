@@ -165,4 +165,4 @@ Metadata describes documents, making them easier to organize, find, and manage. 
 - Easily cross-reference documents via hyperlinks.
 - Future automation opportunities include notifications and financial updates via Power Automate.
 
-## Appendix B: Contract Management Metadata and Automation Guide
+**Next** [8. Metadata Training Guide](8-metadata-training.md)

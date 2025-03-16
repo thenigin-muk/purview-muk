@@ -34,4 +34,4 @@ One of the biggest hurdles in transitioning to structured document management is
 
 To address these challenges, we must transition from **lettered drives** to SharePoint-based **Document Libraries** and adopt a more structured approach to storing, labeling, and retrieving records.
 
-## 4 Metadata: The Key to Smarter Records Organization
+**Next** [2. Metadata: The Key to Smarter Records Organization](2-metadata.md)

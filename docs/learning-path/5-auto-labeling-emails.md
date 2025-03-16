@@ -31,4 +31,4 @@ Microsoft Purview extends auto-labeling beyond SharePoint to Outlook, ensuring t
 - Assigned retention labels that match corresponding SharePoint records.
 - Retained or deleted according to compliance requirements.
 
-## 8 Compliance Manager & Disposition Review
+**Next** [6. Compliance Manager & Disposition Review](6-compliance-disposition.md)
