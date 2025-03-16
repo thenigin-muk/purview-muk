@@ -76,5 +76,3 @@ This automation ensures that contract numbers are always assigned in order witho
 2. Finalize and test JSON formatting for contract number display.
 3. Confirm Managed Metadata Term Set structure.
 4. Plan and develop PowerApps interface in the future.
-
-## Appendix C: Using the REST API to Collect JSON from State Archives
