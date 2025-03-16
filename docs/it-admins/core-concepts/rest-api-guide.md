@@ -40,7 +40,7 @@ The JSON response will contain multiple records. Below is an example response st
     }
   }
 ```
-### Storing API Data**
+### Storing API Data
 
 To store the retrieved JSON in SharePoint, you can:
 
