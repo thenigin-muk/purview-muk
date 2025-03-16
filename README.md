@@ -34,21 +34,9 @@ This guide will help organizations move toward a more **structured, automated, a
 ---
 
 ## 📌 Where Should You Start?
+🔹 **Users Managing Documents in Workflows** → Select your [Workflow Guide](docs/users/users.md).  
 🔹 **New Users & Employees** → Start with the [Learning Path](docs/learning-path/0-tableofcontents.md).  
-🔹 **Users Managing Documents in Workflows** → Select your [Workflow Guide](docs/users/).  
 🔹 **IT Administrators** → Go to the [Admin Folder](docs/it-admins/).  
-
----
-
-### **User Guides for each Workflow**
-These sections provide **step-by-step guides** for **users managing workflows** in SharePoint.
-
-- [Contracts Management](docs/users/contracts/)
-- [Council Meetings](docs/users/council-meetings/)
-- [eDiscovery Cases](docs/users/purview/ediscovery/)
-- [Records Management](docs/users/purview/records-management/)
-- [Email Retention](docs/users/email-retention/)
-- [Purchase Cards (P-Cards)](docs/users/purchase-cards/)
 
 ---
 
