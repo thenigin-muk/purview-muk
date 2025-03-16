@@ -1,4 +1,4 @@
-# User Workflows & Navigation
+# Workflows
 
 This document provides an **easy way to find workflow-specific guides** for managing records in SharePoint.  
 Click on a workflow to access guides, training, and supervisor materials.
