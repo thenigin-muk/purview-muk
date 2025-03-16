@@ -34,8 +34,8 @@ This guide will help organizations move toward a more **structured, automated, a
 ---
 
 ## 📌 Where Should You Start?
-🔹 **Users Managing Documents in Workflows** → Select your [Workflow Guide](docs/users/users.md).  
-🔹 **New Users & Employees** → Start with the [Learning Path](docs/learning-path/0-tableofcontents.md).  
+🔹 **Returning Users** → Select your [Workflow](docs/users/users.md).  
+🔹 **New Users & Employees** → Start your training with the [Learning Path](docs/learning-path/0-tableofcontents.md).  
 🔹 **IT Administrators** → Go to the [Admin Folder](docs/it-admins/).  
 
 ---
