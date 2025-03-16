@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "BillingCycleCloseDate": "2024-06-30",
+    "CardholderName": "John Doe",
+    "SupervisorName": "Jane Smith",
+    "SubmissionStatus": "Submitted",
+    "FileUploaded": true,
+    "SignedCopyReceived": true,
+    "DateSubmitted": "2024-07-02",
+    "StatementYear": 2024,
+    "Active": true
+  }
+}

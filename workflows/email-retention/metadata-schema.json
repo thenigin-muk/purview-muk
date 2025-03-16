@@ -1,0 +1,26 @@
+{
+  "workflow": "email-retention",
+  "metadata": [
+    {
+      "name": "Email Type",
+      "type": "Choice",
+      "options": [
+        "General Correspondence",
+        "Legal Hold",
+        "Records Request"
+      ],
+      "description": "Category of retained email"
+    },
+    {
+      "name": "Retention Duration",
+      "type": "Choice",
+      "options": [
+        "6 Months",
+        "1 Year",
+        "3 Years",
+        "Indefinite"
+      ],
+      "description": "How long the email must be retained"
+    }
+  ]
+}

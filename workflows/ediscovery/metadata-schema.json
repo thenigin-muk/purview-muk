@@ -1,0 +1,20 @@
+{
+  "workflow": "ediscovery",
+  "metadata": [
+    {
+      "name": "Case Number",
+      "type": "Text",
+      "description": "Unique identifier for legal or compliance case"
+    },
+    {
+      "name": "Retention Period",
+      "type": "Choice",
+      "options": [
+        "1 Year",
+        "3 Years",
+        "Indefinite"
+      ],
+      "description": "Legal hold period for records"
+    }
+  ]
+}

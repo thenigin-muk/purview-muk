@@ -1,0 +1,68 @@
+{
+  "fields": [
+    {
+      "name": "Billing Cycle Close Date",
+      "internal_name": "BillingCycleCloseDate",
+      "type": "DateTime",
+      "column_group": "PCard Columns",
+      "description": "Date when the PCard statement cycle ends."
+    },
+    {
+      "name": "Cardholder Name",
+      "internal_name": "CardholderName",
+      "type": "Person or Group",
+      "column_group": "PCard Columns",
+      "description": "The name of the person assigned the PCard."
+    },
+    {
+      "name": "Supervisor Name",
+      "internal_name": "SupervisorName",
+      "type": "Person or Group",
+      "column_group": "PCard Columns",
+      "description": "The designated supervisor for approval."
+    },
+    {
+      "name": "Submission Status",
+      "internal_name": "SubmissionStatus",
+      "type": "Choice",
+      "choices": ["Pending", "Submitted", "Approved", "Rejected"],
+      "column_group": "PCard Columns",
+      "description": "Status of the PCard statement submission."
+    },
+    {
+      "name": "File Uploaded?",
+      "internal_name": "FileUploaded",
+      "type": "Boolean",
+      "column_group": "PCard Columns",
+      "description": "Indicates whether the required file has been uploaded."
+    },
+    {
+      "name": "Signed Copy Received?",
+      "internal_name": "SignedCopyReceived",
+      "type": "Boolean",
+      "column_group": "PCard Columns",
+      "description": "Confirms if the final signed copy has been received."
+    },
+    {
+      "name": "Date Submitted",
+      "internal_name": "DateSubmitted",
+      "type": "DateTime",
+      "column_group": "PCard Columns",
+      "description": "The date when the PCard statement was submitted."
+    },
+    {
+      "name": "Statement Year",
+      "internal_name": "StatementYear",
+      "type": "Number",
+      "column_group": "PCard Columns",
+      "description": "The fiscal year associated with the statement."
+    },
+    {
+      "name": "Active?",
+      "internal_name": "Active",
+      "type": "Boolean",
+      "column_group": "PCard Columns",
+      "description": "Indicates whether the record is still active."
+    }
+  ]
+}

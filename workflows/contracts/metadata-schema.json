@@ -1,0 +1,62 @@
+{
+  "workflow": "contracts",
+  "metadata": [
+    {
+      "name": "Primary Contract Type",
+      "type": "Managed Metadata",
+      "description": "High-level classification of contract",
+      "options": [
+        "Grant",
+        "MOU",
+        "ILA",
+        "Capital Project"
+      ]
+    },
+    {
+      "name": "Contract Type",
+      "type": "Managed Metadata",
+      "description": "Specific sub-category under the Primary Contract Type"
+    },
+    {
+      "name": "Contract Number",
+      "type": "Text",
+      "format": "YYYY-XXX",
+      "description": "Unique contract identifier"
+    },
+    {
+      "name": "Effective Date",
+      "type": "Date",
+      "description": "Start date of the contract"
+    },
+    {
+      "name": "Expiration Date",
+      "type": "Date",
+      "description": "End date of the contract"
+    },
+    {
+      "name": "Vendor/Party Name",
+      "type": "Text",
+      "description": "Name of the vendor or involved party"
+    },
+    {
+      "name": "Approval Status",
+      "type": "Choice",
+      "options": [
+        "Pending",
+        "Approved",
+        "Rejected"
+      ],
+      "description": "Current status of contract approval"
+    },
+    {
+      "name": "Linked Agenda Bill",
+      "type": "Hyperlink",
+      "description": "Link to related council agenda bill"
+    },
+    {
+      "name": "Retention Label",
+      "type": "Managed Metadata",
+      "description": "Applied retention label based on compliance requirements"
+    }
+  ]
+}
