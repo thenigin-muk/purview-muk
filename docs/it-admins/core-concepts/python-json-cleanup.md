@@ -136,5 +136,3 @@ print(f"Transformed data saved to {OUTPUT_FILE}")
     - Configure the Document Library with Document Sets and all relevant metadata required for Purview.
 3. **Automated Labeling**
     - Utilize automation to auto-label documents based on predefined metadata and configurations.
-
-## Appendix E: Example JSON Ready for Graph API
