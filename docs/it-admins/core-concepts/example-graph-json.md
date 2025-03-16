@@ -29,5 +29,3 @@ To properly integrate the cleaned retention data into Microsoft Purview, the JSO
     }
 }
 ```
-
-## Appendix F: Microsoft Graph API Endpoints for Label Management
