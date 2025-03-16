@@ -45,5 +45,3 @@ print(response.json())
 ### Summary
 
 This script provides a structured approach for selecting retention policies before pushing them to Purview, ensuring compliance and automation in records management.
-
-## Appendix G: SharePoint Step-by-Step Guide: Moving Contract Files
