@@ -46,5 +46,3 @@ To store the retrieved JSON in SharePoint, you can:
 
 - Save the JSON as a file in a SharePoint document library.
 - Process the data and insert relevant fields into a SharePoint list.
-
-## Appendix D: Python Script for Cleaning Up and Formatting JSON for Graph API
