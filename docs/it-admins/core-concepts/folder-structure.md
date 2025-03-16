@@ -1,4 +1,4 @@
-Folder Structure Overview
+# Folder Structure Overview
 The project is organized into several key directories to streamline access to documentation and ensure clarity in roles and responsibilities. Below is an outline of the folder structure:
 
 Root Directory
