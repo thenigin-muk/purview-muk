@@ -6,6 +6,8 @@
 
 [⬅ Back to council-meetings](../README.md)
 
+[⬅ Back to council-meetings](../README.md)
+
 This folder contains workflow-specific documentation for Your Organization in Your State.
 
 ## Overview
