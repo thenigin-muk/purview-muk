@@ -1,6 +1,6 @@
 <!-- description: Technical documentation for IT administrators. -->
 
-# It Admins
+# IT Admin Documentation
 
 ### Site Navigation
 [🏠 Home](../README.md) > [It Admins](README.md)

@@ -7,6 +7,8 @@
 ## Description
 Documentation about Purview
 
+---
+
 ## Contents
 
 | **#** | **Topic** | **Description** | **Link** |
