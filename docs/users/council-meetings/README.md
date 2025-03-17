@@ -1,7 +1,11 @@
+<!-- description: Documentation about Council Meetings -->
 # Council Meetings
 
 ### Site Navigation
 [🏠 Home](../../README.md) > [Users](../README.md) > [Council Meetings](README.md)
+
+## Description
+Documentation about Council Meetings
 
 |---|---|---|---|
 | 1 | Supervisors | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Supervisors](supervisors/) |

@@ -3,7 +3,7 @@
 # Troubleshooting & Common Issues
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](README.md)
 
 ## Common Issues & Fixes
 | Issue | Cause | Solution |

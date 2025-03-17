@@ -3,16 +3,17 @@
 # It Admins
 
 ### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md)
+[🏠 Home](../README.md) > [It Admins](README.md)
 
 ## Description
 Technical documentation for IT administrators.
 
-## Contents
+## Folders
 
-| **#** | **Topic** | **Description** |
-|---|---|---|
-| 1 | [Core Concepts](core-concepts/) | Documentation about IT Admin Setup Guide for Your Organization. |
-| 2 | [Setup](setup/) | Documentation about setup |
-| 3 | [Solutions](solutions/) | Documentation about solutions |
-| 4 | [Workflows](workflows/) | Documentation about workflows |
+| **Folder** | **Description** |
+|-----------|---------------|
+| [Core Concepts](core-concepts/) | Documentation about IT Admin Setup Guide for Your Organization. |
+| [Setup](setup/) | Documentation about setup |
+| [Solutions](solutions/) | Documentation about solutions |
+| [Workflows](workflows/) | Navigation to workflow folders |
+

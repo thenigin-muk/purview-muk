@@ -1,12 +1,11 @@
-# contracts
+<!-- description: Contracts -->
+# Contracts
 
 ### Site Navigation
 [🏠 Home](../../README.md) > [Users](../README.md) > [Contracts](README.md)
 
-|---|---|---|---|
-| 1 | Supervisors | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Supervisors](supervisors/) |
-| 2 | Task Guides | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Task Guides](task-guides/) |
-| 3 | Training | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Training](training/) |
+## Description
+Contract
 
 ## Contents
 

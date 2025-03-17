@@ -3,7 +3,7 @@
 # Admin Guide
 
 ### Site Navigation
-[🏠 Home](../../../README.md) > [It Admins](../../README.md) > [Workflows](../README.md) > [Council Meetings](README.md) | [⬅ Back to Council Meetings](../README.md)
+[🏠 Home](../../../README.md) > [It Admins](../../README.md) > [Workflows](../README.md) > [Council Meetings](README.md) | [⬅ Back to Council Meetings](README.md)
 
 # Admin Guide
 

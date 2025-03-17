@@ -3,7 +3,7 @@
 # SharePoint Sites & Libraries Configuration
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](README.md)
 
 ## Next Steps
 - Follow the step-by-step instructions provided.

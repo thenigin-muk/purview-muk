@@ -1,3 +1,4 @@
+<!-- description: Documentation about Training -->
 # Training Materials for council-meetings
 
 ### Site Navigation

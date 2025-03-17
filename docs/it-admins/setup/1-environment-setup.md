@@ -3,7 +3,7 @@
 # Environment Setup & Prerequisites
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](README.md)
 
 ## Prerequisites
 - Windows Subsystem for Linux (WSL) or a virtual environment

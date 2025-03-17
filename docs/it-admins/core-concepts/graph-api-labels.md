@@ -3,7 +3,7 @@
 # Microsoft Graph API Endpoints for Label Management
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](README.md)
 
 ## Overview
 For the most up-to-date and comprehensive details on managing retention labels through Graph API, refer to Microsoft's official documentation:

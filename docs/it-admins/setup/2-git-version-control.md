@@ -3,7 +3,7 @@
 # Version Control & Git Management
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [⬅ Back to Setup](README.md)
 
 ## Overview
 

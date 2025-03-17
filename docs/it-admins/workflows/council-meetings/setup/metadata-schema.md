@@ -3,7 +3,7 @@
 # Ediscovery Workflow - Metadata Schema
 
 ### Site Navigation
-[🏠 Home](../../../../README.md) > [It Admins](../../../README.md) > [Workflows](../../README.md) > [Council Meetings](../README.md) > [Setup](README.md) | [⬅ Back to Setup](../README.md)
+[🏠 Home](../../../../README.md) > [It Admins](../../../README.md) > [Workflows](../../README.md) > [Council Meetings](../README.md) > [Setup](README.md) | [⬅ Back to Setup](README.md)
 
 ## **Metadata Fields**
 | **Field**               | **Type**           | **Description** |

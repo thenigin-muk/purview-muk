@@ -3,7 +3,7 @@
 # Graph API Multi-App Security Guide
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](README.md)
 
 ---
 

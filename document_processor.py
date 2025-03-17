@@ -175,93 +175,104 @@ def ensure_navigation_tables():
         # Create or update the navigation table
         create_navigation_table(dir_path, table_info)
 
+
 def create_navigation_table(dir_path, table_info):
     """Create or update a navigation table README in the specified directory"""
     index_file = Path(f"{dir_path}/README.md")
     
-    # Create directory if it doesn't exist
-    index_file.parent.mkdir(parents=True, exist_ok=True)
-    
-    # Get folder name for title
-    title = Path(dir_path).name.replace('-', ' ').title()
-    if dir_path == "docs":
-        title = "Records Management Documentation"
-    
-    # Create standard description if not provided
-    description = table_info.get('desc', f"Documentation about {title}")
-    
-    # Scan directory for markdown files and subfolders if data is empty
-    if (not table_info["data"]):
-        md_files = sorted([f for f in Path(dir_path).glob("*.md") if f.name != "README.md"])
-        subdirs = sorted([d for d in Path(dir_path).iterdir() if d.is_dir() and not d.name.startswith('.')])
+    # Check if file exists - if so, read it to preserve any custom content
+    if index_file.exists():
+        existing_content = index_file.read_text()
         
-        # Add directories first
-        for i, subdir in enumerate(subdirs):
+        # Extract everything before any existing tables or content sections
+        # This preserves title, description, and navigation
+        content_before_tables = re.split(r'## (Contents|Folders|Documents)', existing_content)[0]
+        
+        # Clean up any trailing separators or extra whitespace
+        content_before_tables = re.sub(r'---+\s*$', '', content_before_tables).rstrip() + "\n\n"
+        
+        # Start with this existing content
+        content = content_before_tables
+    else:
+        # Create directory if it doesn't exist
+        index_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Get folder name for title
+        title = Path(dir_path).name.replace('-', ' ').title()
+        if dir_path == "docs":
+            title = "Records Management Documentation"
+        
+        # Create standard description if not provided
+        description = table_info.get('desc', f"Documentation about {title}")
+        
+        # Create new content with consistent structure
+        content = f"<!-- description: {description} -->\n\n# {title}\n\n"
+        
+        # Generate navigation
+        config = load_config()
+        
+        # For non-root directories, add breadcrumb navigation
+        if dir_path != "docs":
+            # Create top navigation with breadcrumbs
+            top_nav = f"### Site Navigation\n" + generate_breadcrumb_navigation(index_file)
+            content += f"{top_nav}\n\n"
+        
+        # Add description section
+        content += f"## Description\n{description}\n\n"
+    
+    # Scan directory for subfolders and markdown files
+    md_files = sorted([f for f in Path(dir_path).glob("*.md") if f.name.lower() != "readme.md"])
+    subdirs = sorted([d for d in Path(dir_path).iterdir() if d.is_dir() and not d.name.startswith('.')])
+    
+    # Only add a Folders section if there are subdirectories
+    if subdirs:
+        content += "## Folders\n\n"
+        
+        # Build table for subdirectories
+        folder_table = "| **Folder** | **Description** |\n|-----------|---------------|\n"
+        
+        for subdir in subdirs:
             name = subdir.name.replace('-', ' ').title()
-            readme = subdir / "README.md"
+            sub_readme = next((f for f in subdir.glob("*") if f.name.lower() == "readme.md"), None)
             
             # Get description from README if it exists
-            if (readme.exists()):
-                content = readme.read_text()
+            if sub_readme:
+                # Extract only the description comment, not content
+                sub_content = sub_readme.read_text()
                 desc_pattern = r'<!--\s*description:\s*(.+?)\s*-->'
-                desc_match = re.search(desc_pattern, content, re.MULTILINE)
+                desc_match = re.search(desc_pattern, sub_content, re.MULTILINE)
                 
                 if desc_match:
                     desc = desc_match.group(1)
                 else:
-                    # Use description section if available
-                    desc_section = re.search(r'## Description\s*\n(.*?)(?=\n##|\Z)', content, re.DOTALL)
-                    if desc_section:
-                        desc = desc_section.group(1).strip()
-                    else:
-                        desc = f"Documentation for {name}"
+                    desc = f"Documentation for {name}"
             else:
                 desc = f"Documentation for {name}"
-                
-            table_info["data"].append([i + 1, name, desc, f"{subdir.name}/"])
+            
+            # Add row to table with folder name linked
+            folder_table += f"| [{name}]({subdir.name}/) | {desc} |\n"
         
-        # Then add files
-        for i, md_file in enumerate(md_files):
+        content += folder_table + "\n"
+    
+    # Only add a Documents section if there are markdown files
+    if md_files:
+        content += "## Documents\n\n"
+        
+        # Build table for documents
+        doc_table = "| **Document** | **Description** |\n|-------------|---------------|\n"
+        
+        for md_file in md_files:
             name = md_file.stem.replace('-', ' ').title()
             desc = extract_description(md_file)
-            table_info["data"].append([len(subdirs) + i + 1, name, desc, md_file.name])
-    
-    # Create the table content
-    # Create the table content
-    table_header = "| **#** | **Topic** | **Description** |\n|---|---|---|"
-    table_rows = []
-    
-    for row in table_info["data"]:
-        if len(row) >= 4:  # If row has at least 4 elements
-            num = row[0]
-            name = row[1]
-            desc = row[2]
-            link = row[3]
-            table_rows.append(f"| {num} | [{name}]({link}) | {desc} |")
-    
-    table_content = table_header + "\n" + "\n".join(table_rows)
-    
-    # Create new content with consistent structure
-    content = f"<!-- description: {description} -->\n\n# {title}\n\n"
-    
-    # Add breadcrumb navigation
-    if dir_path != "docs":  # Skip for root
-        home_path = get_relative_path("README.md", index_file)
-        workflows_path = get_relative_path("users/users.md", index_file)
-        admin_path = get_relative_path("it-admins/README.md", index_file)
+            
+            # Add row to table with document name linked
+            doc_table += f"| [{name}]({md_file.name}) | {desc} |\n"
         
-        content += f"### Site Navigation\n"
-        content += f"[🏠 Home]({home_path}) | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})\n\n"
+        content += doc_table
     
-    # Add description and table
-    content += f"## Description\n{description}\n\n## Contents\n\n{table_content}"
-    
-    # Only write if changed
-    if not index_file.exists() or index_file.read_text() != content:
-        index_file.write_text(content)
-        print(f"✅ Updated navigation table: {index_file}")
-    else:
-        print(f"ℹ️ No changes needed for: {index_file}")
+    # Write to file
+    index_file.write_text(content)
+    print(f"✅ Updated navigation in: {index_file}")
 
 def verify_workflow_table():
     """Verify and fix the workflow table in users.md"""
@@ -397,18 +408,24 @@ def extract_description(file_path):
     desc_match = re.search(desc_pattern, content, re.MULTILINE)
     
     if desc_match:
-        return desc_match.group(1)
+        # If we have a description comment, use that directly
+        return desc_match.group(1).strip()
     
-    # If no description comment, check for a description section
-    desc_section = re.search(r'## Description\s*\n(.*?)(?=\n##|\Z)', content, re.DOTALL)
-    if desc_section:
-        return desc_section.group(1).strip()
+    # For README files, look for a Description section, but avoid including table content
+    if file_path.name.lower() == "readme.md":
+        # Look for a Description section but stop before any table or next heading
+        desc_section = re.search(r'## Description\s*\n(.*?)(?=\n##|\n\||\Z)', content, re.DOTALL)
+        if desc_section:
+            return desc_section.group(1).strip()
     
-    # Fallback: Use first paragraph after title but SKIP navigation section
+    # Fallback: Use first paragraph after title but SKIP navigation and table sections
     content_without_nav = re.sub(r'### Site Navigation\n.*?\n\n', '\n\n', content, flags=re.DOTALL)
+    content_without_nav = re.sub(r'\|.*\|.*\|.*\|', '', content_without_nav, flags=re.MULTILINE)  # Remove table rows
     first_para = re.search(r'# .+?\n\n(.+?)(?=\n\n|\Z)', content_without_nav, re.DOTALL)
     if first_para:
-        return first_para.group(1).replace('\n', ' ')[:100] + "..."
+        clean_para = first_para.group(1).replace('\n', ' ').strip()
+        if '|' not in clean_para and '---' not in clean_para:  # Extra check to avoid table fragments
+            return clean_para[:100] + "..." if len(clean_para) > 100 else clean_para
     
     # Last resort: generic description
     return f"Documentation about {Path(file_path).stem.replace('-', ' ').title()}"
@@ -441,7 +458,7 @@ def generate_navigation(file_path, config):
     
     # Add back link to parent folder for non-README files
     if file_path.name.lower() != "readme.md":
-        back_path = "../README.md"
+        back_path = "README.md"
         parent_folder = file_path.parent.name.replace('-', ' ').title()
         top_nav += f" | [⬅ Back to {parent_folder}]({back_path})"
     
@@ -648,6 +665,50 @@ def generate_breadcrumb_navigation(file_path):
     # Connect all parts with separator
     return " > ".join(breadcrumbs)
 
+def ensure_readme_has_description(readme_path):
+    """Ensure README files have proper description comments and sections"""
+    content = Path(readme_path).read_text()
+    modified = False
+    
+    # Check for description comment
+    desc_pattern = r'<!--\s*description:\s*(.+?)\s*-->'
+    desc_match = re.search(desc_pattern, content, re.MULTILINE)
+    
+    if not desc_match:
+        # Create a default description based on the folder name
+        folder_name = readme_path.parent.name.replace('-', ' ').title()
+        default_desc = f"Documentation about {folder_name}"
+        
+        # Add description comment at the top
+        content = f"<!-- description: {default_desc} -->\n{content}"
+        modified = True
+    else:
+        # Use existing description
+        default_desc = desc_match.group(1)
+    
+    # Check if a description section exists
+    if "## Description" not in content:
+        # Find where to insert the description section (after navigation, before any other section)
+        nav_pattern = r'### Site Navigation.*?\n\n'
+        nav_match = re.search(nav_pattern, content, re.DOTALL)
+        
+        if nav_match:
+            # Insert after navigation
+            end_pos = nav_match.end()
+            content = content[:end_pos] + f"## Description\n{default_desc}\n\n" + content[end_pos:]
+        else:
+            # If no navigation, insert after title
+            title_match = re.search(r'# .*?\n', content)
+            if title_match:
+                end_pos = title_match.end()
+                content = content[:end_pos] + f"\n## Description\n{default_desc}\n\n" + content[end_pos:]
+        modified = True
+    
+    # Write back if modified
+    if modified:
+        Path(readme_path).write_text(content)
+        print(f"✅ Added description to README: {readme_path}")
+
 def main():
     parser = argparse.ArgumentParser(description="Documentation processor for municipality records management")
     parser.add_argument("--html", action="store_true", help="Generate HTML files for SharePoint")
@@ -671,6 +732,10 @@ def main():
     # Process all markdown files
     docs_dir = Path("docs")
     print("🔍 Starting documentation navigation update...")
+    
+    # First ensure all README files have proper descriptions
+    for readme_path in docs_dir.glob("**/README.md"):
+        ensure_readme_has_description(readme_path)
     
     for file_path in docs_dir.glob("**/*.md"):
         # First clean up any duplicate navigation

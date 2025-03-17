@@ -1,3 +1,4 @@
+<!-- description: Documentation about Training -->
 # Training Materials for purchase-cards
 
 ### Site Navigation
@@ -13,3 +14,4 @@ This folder contains training materials and explanations for concepts in the **p
 
 | **#** | **Topic** | **Description** | **Link** |
 |---|---|---|---|
+| 1 | Submit Pcard | Documentation about Submit Pcard for Your Organization. | [Submit Pcard](submit-pcard.md) |

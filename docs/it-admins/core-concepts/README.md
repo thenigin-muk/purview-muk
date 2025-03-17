@@ -4,6 +4,9 @@
 ### Site Navigation
 [🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md)
 
+## Description
+Documentation about IT Admin Setup Guide for Your Organization.
+
 ## Contents
 
 | **#** | **Topic** | **Description** | **Link** |

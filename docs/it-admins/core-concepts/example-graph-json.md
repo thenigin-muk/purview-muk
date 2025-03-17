@@ -3,7 +3,7 @@
 # Example JSON Ready for Graph API
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](README.md)
 
 To properly integrate the cleaned retention data into Microsoft Purview, the JSON must be formatted according to Graph API requirements. Below is an example of how the structured JSON should look before being sent via a PATCH or PUT request to Graph API.
 

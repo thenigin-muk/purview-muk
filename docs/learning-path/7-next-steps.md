@@ -3,7 +3,7 @@
 # Next Steps & Implementation
 
 ### Site Navigation
-[🏠 Home](../README.md) > [Learning Path](README.md) | [⬅ Back to Learning Path](../README.md)
+[🏠 Home](../README.md) > [Learning Path](README.md) | [⬅ Back to Learning Path](README.md)
 
 ## Implementing SharePoint for Auto-Labeling & Retention
 

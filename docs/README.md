@@ -2,13 +2,17 @@
 
 # Records Management Documentation
 
+### Site Navigation
+[🏠 Home](README.md)
+
 ## Description
 Welcome to the Records Management Documentation. Select a section below to get started.
 
-## Contents
+## Folders
 
-| **#** | **Topic** | **Description** |
-|---|---|---|
-| 1 | [Users](users/) | End-user documentation and workflows |
-| 2 | [IT Administrators](it-admins/) | Setup and configuration guides |
-| 3 | [Learning Path](learning-path/) | Step-by-step training guide for new users |
+| **Folder** | **Description** |
+|-----------|---------------|
+| [It Admins](it-admins/) | Technical documentation for IT administrators. |
+| [Learning Path](learning-path/) | Step-by-step training guide for new users. |
+| [Users](users/) | End-user documentation for records management workflows. |
+

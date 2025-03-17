@@ -1,3 +1,4 @@
+<!-- description: Documentation about Task Guides -->
 # Task Guides for purchase-cards
 
 ### Site Navigation
@@ -12,3 +13,4 @@ This folder contains step-by-step guides for performing tasks in the **purchase-
 
 | **#** | **Topic** | **Description** | **Link** |
 |---|---|---|---|
+| 1 | Purchase Cards User Guide | Documentation about PCard Statement Workflow  for Your Organization. | [Purchase Cards User Guide](purchase-cards-user-guide.md) |

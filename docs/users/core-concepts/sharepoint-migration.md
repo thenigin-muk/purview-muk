@@ -3,7 +3,7 @@
 # Sharepoint Migration
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [Users](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](../README.md)
+[🏠 Home](../../README.md) > [Users](../README.md) > [Core Concepts](README.md) | [⬅ Back to Core Concepts](README.md)
 
 # Sharepoint Migration
 

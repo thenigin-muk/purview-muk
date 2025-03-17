@@ -1,27 +1,17 @@
+<!-- description: Documentation about Purchase Cards -->
 # Purchase Cards
 
 ### Site Navigation
 [🏠 Home](../../README.md) > [Users](../README.md) > [Purchase Cards](README.md)
 
-|---|---|---|---|
-| 1 | Supervisors | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Supervisors](supervisors/) |
-| 2 | Task Guides | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Task Guides](task-guides/) |
-| 3 | Training | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Training](training/) |
-| 4 | Purchase Cards User Guide | Documentation about PCard Statement Workflow  for Your Organization. | [Purchase Cards User Guide](purchase-cards-user-guide.md) |
-| 5 | Submit Pcard | Documentation about Submit Pcard for Your Organization. | [Submit Pcard](submit-pcard.md) |
+## Description
+Documentation about Purchase Cards
 
 ## Contents
 
 | **#** | **Topic** | **Description** | **Link** |
 |---|---|---|---|
-| 1 | Supervisors | This folder contains guidelines and policies for supervisors managing the **purchase-cards** workflow.
-
---- | [Supervisors](supervisors/) |
-| 2 | Task Guides | This folder contains step-by-step guides for performing tasks in the **purchase-cards** workflow.
-
---- | [Task Guides](task-guides/) |
-| 3 | Training | This folder contains training materials and explanations for concepts in the **purchase-cards** workflow.
-
---- | [Training](training/) |
-| 4 | Purchase Cards User Guide | Documentation about PCard Statement Workflow  for Your Organization. | [Purchase Cards User Guide](purchase-cards-user-guide.md) |
-| 5 | Submit Pcard | Documentation about Submit Pcard for Your Organization. | [Submit Pcard](submit-pcard.md) |
+| 1 | Supervisors | Documentation about Supervisors | [Supervisors](supervisors/) |
+| 2 | Task Guides | Documentation about Task Guides | [Task Guides](task-guides/) |
+| 3 | Training | Documentation about Training | [Training](training/) |
+## Contents
