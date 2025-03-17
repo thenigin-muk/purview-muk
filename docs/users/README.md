@@ -10,11 +10,11 @@ End-user documentation for records management workflows.
 
 ## Contents
 
-| **#** | **Topic** | **Description** | **Link** |
-|---|---|---|---|
-| 1 | Contracts | Documentation for Contracts | [Contracts](contracts/) |
-| 2 | Core Concepts | Documentation for Core Concepts | [Core Concepts](core-concepts/) |
-| 3 | Council Meetings | Documentation for Council Meetings | [Council Meetings](council-meetings/) |
-| 4 | Email Retention | Documentation for Email Retention | [Email Retention](email-retention/) |
-| 5 | Purchase Cards | Documentation for Purchase Cards | [Purchase Cards](purchase-cards/) |
-| 6 | Purview | Documentation for Purview | [Purview](purview/) |
+| **#** | **Topic** | **Description** |
+|---|---|---|
+| 1 | [Contracts](contracts/) | Documentation for Contracts |
+| 2 | [Core Concepts](core-concepts/) | Documentation for Core Concepts |
+| 3 | [Council Meetings](council-meetings/) | Documentation for Council Meetings |
+| 4 | [Email Retention](email-retention/) | Documentation for Email Retention |
+| 5 | [Purchase Cards](purchase-cards/) | Documentation for Purchase Cards |
+| 6 | [Purview](purview/) | Documentation for Purview |

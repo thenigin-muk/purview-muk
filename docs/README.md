@@ -7,8 +7,8 @@ Welcome to the Records Management Documentation. Select a section below to get s
 
 ## Contents
 
-| **#** | **Topic** | **Description** | **Link** |
-|---|---|---|---|
-| 1 | Users | End-user documentation and workflows | [Users](users/) |
-| 2 | IT Administrators | Setup and configuration guides | [IT Administrators](it-admins/) |
-| 3 | Learning Path | Step-by-step training guide for new users | [Learning Path](learning-path/) |
+| **#** | **Topic** | **Description** |
+|---|---|---|
+| 1 | [Users](users/) | End-user documentation and workflows |
+| 2 | [IT Administrators](it-admins/) | Setup and configuration guides |
+| 3 | [Learning Path](learning-path/) | Step-by-step training guide for new users |

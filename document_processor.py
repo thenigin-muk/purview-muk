@@ -227,17 +227,17 @@ def create_navigation_table(dir_path, table_info):
             table_info["data"].append([len(subdirs) + i + 1, name, desc, md_file.name])
     
     # Create the table content
-    table_header = "| **" + "** | **".join(table_info["columns"]) + "** |\n|" + "|".join(["---"] * len(table_info["columns"])) + "|"
+    # Create the table content
+    table_header = "| **#** | **Topic** | **Description** |\n|---|---|---|"
     table_rows = []
     
     for row in table_info["data"]:
-        # Format link column differently based on data structure
-        if (len(row) >= 4):  # If row has at least 4 elements
+        if len(row) >= 4:  # If row has at least 4 elements
             num = row[0]
             name = row[1]
             desc = row[2]
             link = row[3]
-            table_rows.append(f"| {num} | {name} | {desc} | [{name}]({link}) |")
+            table_rows.append(f"| {num} | [{name}]({link}) | {desc} |")
     
     table_content = table_header + "\n" + "\n".join(table_rows)
     

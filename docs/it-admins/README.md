@@ -10,9 +10,9 @@ Technical documentation for IT administrators.
 
 ## Contents
 
-| **#** | **Topic** | **Description** | **Link** |
-|---|---|---|---|
-| 1 | Core Concepts | Documentation for Core Concepts | [Core Concepts](core-concepts/) |
-| 2 | Setup | Documentation about setup | [Setup](setup/) |
-| 3 | Solutions | Documentation about solutions | [Solutions](solutions/) |
-| 4 | Workflows | Documentation about workflows | [Workflows](workflows/) |
+| **#** | **Topic** | **Description** |
+|---|---|---|
+| 1 | [Core Concepts](core-concepts/) | Documentation for Core Concepts |
+| 2 | [Setup](setup/) | Documentation about setup |
+| 3 | [Solutions](solutions/) | Documentation about solutions |
+| 4 | [Workflows](workflows/) | Documentation about workflows |
