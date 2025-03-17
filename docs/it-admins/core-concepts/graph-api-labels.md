@@ -48,7 +48,6 @@ print(response.json())
 This script provides a structured approach for selecting retention policies before pushing them to Purview, ensuring compliance and automation in records management.
 
 
-
 ---
 
 [⬅ Previous: Graph Api Guide](graph-api-guide.md) | [Next: Graph Api Security ➡](graph-api-security.md)

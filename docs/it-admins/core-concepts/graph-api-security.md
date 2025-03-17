@@ -139,7 +139,6 @@ This guide should be **referenced before implementing API-driven workflows** to 
 
 
 
-
 ---
 
 [⬅ Previous: Graph Api Labels](graph-api-labels.md) | [Next: Managed Metadata ➡](managed-metadata.md)

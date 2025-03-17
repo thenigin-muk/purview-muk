@@ -16,7 +16,6 @@ This section provides a detailed guide on **SharePoint Sites & Libraries Configu
 [← Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot)](4-m365-requirements.md) | [Microsoft Purview Compliance Configuration →](6-purview-configuration.md)
 
 
-
 ---
 
 [⬅ Previous: 4 M365 Requirements](4-m365-requirements.md) | [Next: 6 Purview Configuration ➡](6-purview-configuration.md)

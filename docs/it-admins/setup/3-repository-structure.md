@@ -16,7 +16,6 @@ This section provides a detailed guide on **Understanding Repository Structure**
 [← Version Control & Git Management](2-git-version-control.md) | [Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot) →](4-m365-requirements.md)
 
 
-
 ---
 
 [⬅ Previous: 2 Git Version Control](2-git-version-control.md) | [Next: 4 M365 Requirements ➡](4-m365-requirements.md)

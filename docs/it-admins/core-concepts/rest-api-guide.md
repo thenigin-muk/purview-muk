@@ -49,7 +49,6 @@ To store the retrieved JSON in SharePoint, you can:
 - Process the data and insert relevant fields into a SharePoint list.
 
 
-
 ---
 
 [⬅ Previous: Python Json Cleanup](python-json-cleanup.md) | 

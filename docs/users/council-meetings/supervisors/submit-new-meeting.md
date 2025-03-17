@@ -5,5 +5,4 @@
 [⬅ Back to council-meetings](../README.md)
 
 
-
 <!-- description: Documentation about Submit New Meeting for Your Organization. -->

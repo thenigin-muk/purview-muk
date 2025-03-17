@@ -5,9 +5,7 @@
 [⬅ Back to purchase-cards](../README.md)
 
 
-
 <!-- description: Documentation about Submit Pcard for Your Organization. -->
-
 
 
 ---

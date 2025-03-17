@@ -1,14 +1,6 @@
 # IT Administrator Documentation
 
-### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md)
-
-
-
-### Descriptiion
 Resources for IT Administrators implementing and maintaining Records Management solutions.
-
-### Navigation Table
 
 | **Section** | **Description** | **Link** |
 |---|---|---|

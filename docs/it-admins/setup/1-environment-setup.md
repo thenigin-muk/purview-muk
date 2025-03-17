@@ -30,7 +30,6 @@ ssh-add ~/.ssh/id_rsa
 [Troubleshooting & Common Issues →](10-troubleshooting.md)
 
 
-
 ---
 
 [⬅ Previous: 0 Setup Guide](0-setup-guide.md) | [Next: 10 Troubleshooting ➡](10-troubleshooting.md)

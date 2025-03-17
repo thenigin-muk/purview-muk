@@ -16,7 +16,6 @@ This section provides a detailed guide on **Deployment & Change Management**, in
 [← Power Automate & PowerApps Integration](8-powerapps-powerautomate.md)
 
 
-
 ---
 
 [⬅ Previous: 8 Powerapps Powerautomate](8-powerapps-powerautomate.md) | 

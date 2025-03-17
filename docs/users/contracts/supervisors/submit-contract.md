@@ -5,5 +5,4 @@
 [⬅ Back to contracts](../README.md)
 
 
-
 <!-- description: Documentation about Submit Contract for Your Organization. -->

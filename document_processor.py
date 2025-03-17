@@ -336,14 +336,9 @@ def ensure_navigation_tables():
     
 
 def create_navigation_table(dir_path, table_info):
-    """Create a navigation table README in the specified directory"""
+    """Create or update a navigation table README in the specified directory"""
     index_file = Path(f"{dir_path}/README.md")
     
-    # Skip if README already exists
-    if (index_file.exists()):
-        print(f"ℹ️ Navigation table already exists: {index_file}")
-        return
-        
     # Create directory if it doesn't exist
     index_file.parent.mkdir(parents=True, exist_ok=True)
     
@@ -364,9 +359,20 @@ def create_navigation_table(dir_path, table_info):
     content += f"| {headers} |\n|{separator}|\n"
     content += "\n".join(rows)
     
+    # Check if README exists
+    if index_file.exists():
+        # Preserve any content after the table
+        existing_content = index_file.read_text()
+        # Find any content after the navigation table
+        after_table_match = re.search(r'\n\n---\n\n(.*)', existing_content, re.DOTALL)
+        if after_table_match:
+            content += f"\n\n---\n\n{after_table_match.group(1)}"
+        print(f"📊 Updated navigation table: {index_file}")
+    else:
+        print(f"✅ Created navigation table: {index_file}")
+    
     # Write to file
     index_file.write_text(content)
-    print(f"✅ Created navigation table: {index_file}")
 
 def verify_workflow_table():
     """Verify and fix the workflow table in users.md"""

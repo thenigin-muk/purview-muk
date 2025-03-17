@@ -35,9 +35,6 @@ A **Document Set** in SharePoint is similar to a folder but with key improvement
 - All documents in the set inherit the same metadata (classification, retention, etc.)
 - Users can easily access related records in one place
 
-**Next** [4. Automating Records Retention & Compliance](4-automating-retention.md)
-
-
 ---
 
 [⬅ Previous: 2 Metadata](2-metadata.md) | [Next: 4 Automating Retention ➡](4-automating-retention.md)

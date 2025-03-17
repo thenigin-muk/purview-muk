@@ -39,7 +39,6 @@ print(response.json())
 [← Microsoft Purview Compliance Configuration](6-purview-configuration.md) | [Power Automate & PowerApps Integration →](8-powerapps-powerautomate.md)
 
 
-
 ---
 
 [⬅ Previous: 6 Purview Configuration](6-purview-configuration.md) | [Next: 8 Powerapps Powerautomate ➡](8-powerapps-powerautomate.md)

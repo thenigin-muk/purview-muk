@@ -123,7 +123,6 @@ This guide provides a **secure foundation** for working with **Microsoft Graph A
 
 
 
-
 ---
 
 [⬅ Previous: Example Graph Json](example-graph-json.md) | [Next: Graph Api Labels ➡](graph-api-labels.md)

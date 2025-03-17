@@ -5,9 +5,7 @@
 [⬅ Back to core-concepts](../README.md)
 
 
-
 <!-- description: Documentation about Sharepoint Migration for Your Organization. -->
-
 
 
 ---

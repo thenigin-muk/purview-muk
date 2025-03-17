@@ -16,7 +16,6 @@ This section provides a detailed guide on **Microsoft Purview Compliance Configu
 [← SharePoint Sites & Libraries Configuration](5-sharepoint-configuration.md) | [API Integration & Script Execution →](7-api-and-scripts.md)
 
 
-
 ---
 
 [⬅ Previous: 5 Sharepoint Configuration](5-sharepoint-configuration.md) | [Next: 7 Api And Scripts ➡](7-api-and-scripts.md)

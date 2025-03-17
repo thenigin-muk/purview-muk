@@ -16,7 +16,6 @@ This section provides a detailed guide on **Power Automate & PowerApps Integrati
 [← API Integration & Script Execution](7-api-and-scripts.md) | [Deployment & Change Management →](9-deployment.md)
 
 
-
 ---
 
 [⬅ Previous: 7 Api And Scripts](7-api-and-scripts.md) | [Next: 9 Deployment ➡](9-deployment.md)

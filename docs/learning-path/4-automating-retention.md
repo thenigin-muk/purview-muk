@@ -43,9 +43,6 @@ By using metadata-driven auto-labeling and Microsoft Purview, SharePoint can:
 - Lock finalized records to prevent accidental changes
 - Ensure compliance with legal & regulatory requirements
 
-[5. Expanding Auto-Labeling to Emails](5-auto-labeling-emails.md)
-
-
 ---
 
 [⬅ Previous: 3 Document Sets](3-document-sets.md) | [Next: 5 Auto Labeling Emails ➡](5-auto-labeling-emails.md)
