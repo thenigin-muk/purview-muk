@@ -1,7 +1,8 @@
 # core-concepts
 
 ### Site Navigation
-[🏠 Home](../../README.md) | **#** | **Topic** | **Description** | **Link** |
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to core-concepts](../README.md)
+
 |---|---|---|---|
 | 1 | Metadata Guide | Documentation about Managed Metadata & Term Sets in SharePoint for Your Organization. | [Metadata Guide](metadata-guide.md) |
 | 2 | Retention Policies | Documentation about Retention Policies for Your Organization. | [Retention Policies](retention-policies.md) |

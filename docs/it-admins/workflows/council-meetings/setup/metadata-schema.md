@@ -1,9 +1,9 @@
 <!-- description: Documentation about Ediscovery Workflow - Metadata Schema for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../../../README.md) | [📂 All Workflows](../../../../users/users.md) | [⚙ IT Admin Docs](../../../README.md)
-
 # Ediscovery Workflow - Metadata Schema
+
+### Site Navigation
+[🏠 Home](../../../../README.md) | [📂 All Workflows](../../../../users/users.md) | [⚙ IT Admin Docs](../../../../it-admins/README.md)
 
 ## **Metadata Fields**
 | **Field**               | **Type**           | **Description** |

@@ -1,9 +1,9 @@
 <!-- description: Documentation about Power Automate & PowerApps Integration for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # Power Automate & PowerApps Integration
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Next Steps
 - Follow the step-by-step instructions provided.

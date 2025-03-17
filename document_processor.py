@@ -428,7 +428,12 @@ def generate_navigation(file_path, config):
     # Read content
     content = file_path.read_text()
     original_content = content
-    
+
+    # Skip navigation generation if skip marker exists
+    if '<!-- skip-navigation -->' in content:
+      print(f"ℹ️ Skipping navigation generation for: {file_path}")
+      return
+
     # Get title from first heading or filename
     title_match = re.search(r'^# (.*)', content, re.MULTILINE)
     title = title_match.group(1) if title_match else file_path.stem.replace('-', ' ').title()
@@ -463,7 +468,12 @@ def generate_navigation(file_path, config):
     
     # Insert navigation after title
     if title_match:
-        content = re.sub(r'^# .*\n', f"# {title}\n\n{top_nav}\n\n", content, count=1)
+        # Get the position of the title match
+        title_pos = content.find(f"# {title}")
+        title_end = title_pos + len(f"# {title}\n")
+        
+        # Insert navigation after title
+        content = content[:title_end] + f"\n{top_nav}\n\n" + content[title_end:]
     else:
         # If no title found, add one with navigation
         content = f"# {title}\n\n{top_nav}\n\n{content}"

@@ -1,9 +1,9 @@
 <!-- description: Documentation about Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot) for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot)
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Licensing Requirements
 Microsoft 365 licensing determines which compliance features are available. **Key differences:**

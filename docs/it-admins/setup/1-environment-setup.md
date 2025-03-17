@@ -1,9 +1,9 @@
 <!-- description: Documentation about Environment Setup & Prerequisites for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # Environment Setup & Prerequisites
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Prerequisites
 - Windows Subsystem for Linux (WSL) or a virtual environment
@@ -15,6 +15,8 @@
 2. Install Git: [Git Download](https://git-scm.com/downloads)
 3. Install VS Code: [VS Code Download](https://code.visualstudio.com/)
 4. Configure SSH keys for GitHub:
+
+From your WSL Environment
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -35,6 +37,55 @@ ssh-add ~/.ssh/id_rsa
 ```sh
 eval "$(ssh-agent -s)"
 ```
+
+5. **Add the SSH key to your GitHub account**:
+    - Copy the SSH key to your clipboard:
+    ```sh
+    cat ~/.ssh/id_rsa.pub
+    ```
+    - Go to your GitHub account settings, navigate to "SSH and GPG keys", and add a new SSH key. Paste the key from your clipboard.
+
+6. **Connect to the repository**:
+    - Navigate to your project folder:
+    ```sh
+    cd ~/git-projects/purview-muk
+    ```
+    - Initialize a new Git repository if you haven't already:
+    ```sh
+    git init
+    ```
+    - Add the remote repository using the SSH URL. Replace `git@github.com:username/repo.git` with your repository's SSH URL:
+    ```sh
+    git remote add origin git@github.com:username/repo.git
+    ```
+    - Verify the remote repository has been added:
+    ```sh
+    git remote -v
+    ```
+    - Fetch the latest changes from the remote repository:
+    ```sh
+    git fetch origin
+    ```
+    - Pull the latest changes from the remote repository:
+    ```sh
+    git pull origin main
+    ```
+
+7. **Create a new branch**:
+    - Create and switch to a new branch:
+    ```sh
+    git checkout -b your-branch-name
+    ```
+
+8. **Run the setup script**:
+    - Make the setup script executable:
+    ```sh
+    chmod +x setup.sh
+    ```
+    - Run the setup script:
+    ```sh
+    ./setup.sh
+    ```
 
 ## Next Steps
 - Follow the step-by-step instructions provided.

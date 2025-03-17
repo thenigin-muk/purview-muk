@@ -1,9 +1,9 @@
 <!-- description: Documentation about Managed Metadata & Term Sets in SharePoint for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # Managed Metadata & Term Sets in SharePoint
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Planning Your Term Sets
 Before implementing workflows, organizations **must decide** on the **term sets** they will use. Common term sets include:

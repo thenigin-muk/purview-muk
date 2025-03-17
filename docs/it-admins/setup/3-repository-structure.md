@@ -1,9 +1,9 @@
 <!-- description: Documentation about Understanding Repository Structure for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # Understanding Repository Structure
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Next Steps
 - Follow the step-by-step instructions provided.

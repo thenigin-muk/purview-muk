@@ -1,13 +1,11 @@
 <!-- description: Documentation about IT Admin Setup Guide for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # IT Admin Setup Guide
 
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
+
 ## Overview
-------|
-[Next: 1 Environment Setup ➡](1-environment-setup.md)
 
 ---
 

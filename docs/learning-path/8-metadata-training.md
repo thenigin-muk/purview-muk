@@ -1,9 +1,9 @@
 <!-- description: Documentation about Metadata Training and Reference Guide for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
-
 # Metadata Training and Reference Guide
+
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](../learning-path/0-tableofcontents.md)
 
 ### **What is Metadata?**
 

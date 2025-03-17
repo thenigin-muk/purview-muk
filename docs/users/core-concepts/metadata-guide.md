@@ -1,9 +1,9 @@
 <!-- description: Documentation about Managed Metadata & Term Sets in SharePoint for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to core-concepts](../README.md)
-
 # Managed Metadata & Term Sets in SharePoint
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to core-concepts](../README.md)
 
 ## How Term Sets Work
 - Term Sets are **centrally managed** in the **SharePoint Term Store**.

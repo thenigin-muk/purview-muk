@@ -1,11 +1,9 @@
 <!-- description: Documentation about Contract Management Metadata and Automation Guide for Your Organization. -->
 
-### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
-
 # Contract Management Metadata and Automation Guide
 
-### Site Navigiation
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Overview
 - Primary Contract Type captures the highest-level classification of the contract (e.g., On-Call Consultant Agreement for multiple Task Orders).
