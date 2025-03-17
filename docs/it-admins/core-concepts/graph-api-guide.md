@@ -1,5 +1,11 @@
 <!-- description: Documentation about Graph API Access & Security Guide for Your Organization. -->
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
 # Graph API Access & Security Guide
+
+### Site Navigiation
 
 ## Overview
 This guide explains how to securely authenticate and interact with Microsoft Graph API using **client credentials** in Azure, safely store secrets, and execute API calls using **Python and Bash**.

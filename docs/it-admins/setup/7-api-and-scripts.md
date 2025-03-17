@@ -1,8 +1,9 @@
 <!-- description: Documentation about API Integration & Script Execution for Your Organization. -->
-# API Integration & Script Execution
 
-## Overview
-This section provides a detailed guide on **API Integration & Script Execution**, including setup steps and best practices.
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
+# API Integration & Script Execution
 
 ## Overview of API Usage
 Microsoft Graph API and REST APIs enable advanced automation and data retrieval from SharePoint and Purview.
@@ -32,11 +33,6 @@ print(response.json())
 - Follow the step-by-step instructions provided.
 - Ensure all dependencies and configurations are in place.
 - If encountering issues, refer to the [Troubleshooting Guide](10-troubleshooting.md).
-
----
-
-### Navigation
-[← Microsoft Purview Compliance Configuration](6-purview-configuration.md) | [Power Automate & PowerApps Integration →](8-powerapps-powerautomate.md)
 
 ---
 

@@ -1,7 +1,9 @@
 <!-- description: Documentation about Understanding SharePoint Document Management for Your Organization. -->
-# Understanding SharePoint Document Management
 
-### What is SharePoint Document Management?
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
+
+# Understanding SharePoint Document Management
 
 SharePoint is a **cloud-based collaboration platform** that enables teams to store, organize, and manage documents efficiently. Unlike traditional Windows File Servers, which rely on **lettered drives and deep folder structures**, SharePoint introduces a more flexible and metadata-driven approach to document organization.
 
@@ -39,4 +41,4 @@ To address these challenges, we must transition from **lettered drives** to Shar
 
 ---
 
-[⬅ Previous: 0 Tableofcontents](0-tableofcontents.md) | [Next: 2 Metadata ➡](2-metadata.md)
+[Next: 2 Metadata ➡](2-metadata.md)

@@ -1,6 +1,9 @@
+<!-- description: Documentation about Microsoft Graph API Endpoints for Label Management for Your Organization. -->
 # Microsoft Graph API Endpoints for Label Management
 
-**Microsoft Documentation Reference**
+### Site Navigation
+
+## Overview
 
 For the most up-to-date and comprehensive details on managing retention labels through Graph API, refer to Microsoft's official documentation:
 
@@ -8,7 +11,6 @@ For the most up-to-date and comprehensive details on managing retention labels t
 - [Create and Manage Retention Labels](https://learn.microsoft.com/en-us/microsoft-365/compliance/create-retention-labels?view=o365-worldwide)
 
 ### API Reference Table
-
 
 | **Action** | **HTTP Method** | **Endpoint** |
 | --- | --- | --- |
@@ -45,3 +47,7 @@ print(response.json())
 ### Summary
 
 This script provides a structured approach for selecting retention policies before pushing them to Purview, ensuring compliance and automation in records management.
+
+---
+
+[⬅ Previous: Graph Api Guide](graph-api-guide.md) | [Next: Graph Api Security ➡](graph-api-security.md)

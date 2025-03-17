@@ -1,17 +1,10 @@
-# purview
+# Purview
 
 ### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
-[⬅ Back to purview](../README.md)
-
-[⬅ Back to purview](../README.md)
-
-[⬅ Back to purview](../README.md)
-
-This folder contains workflow-specific documentation for Your Organization in Your State.
-
-## Overview
-This workflow includes processes for managing purview records according to retention schedules.
-
----
-[⬅ Back to Workflows](../users.md)
+[🏠 Home](../../README.md) | **#** | **Topic** | **Description** | **Link** |
+|---|---|---|---|
+| 1 | Ediscovery | Documentation for Ediscovery | [Ediscovery](ediscovery/) |
+| 2 | Records Management | Documentation for Records Management | [Records Management](records-management/) |
+| 3 | Supervisors | Documentation for Supervisors | [Supervisors](supervisors/) |
+| 4 | Task Guides | Documentation for Task Guides | [Task Guides](task-guides/) |
+| 5 | Training | Documentation for Training | [Training](training/) |

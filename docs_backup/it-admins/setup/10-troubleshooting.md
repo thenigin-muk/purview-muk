@@ -1,4 +1,7 @@
+<!-- description: Documentation about Troubleshooting & Common Issues for Your Organization. -->
 # Troubleshooting & Common Issues
+
+### Site Navigation
 
 ## Overview
 This section provides a detailed guide on **Troubleshooting & Common Issues**, including setup steps and best practices.
@@ -17,5 +20,4 @@ This section provides a detailed guide on **Troubleshooting & Common Issues**, i
 
 ---
 
-### Navigation
-[← Environment Setup & Prerequisites](1-environment-setup.md) | [Version Control & Git Management →](2-git-version-control.md)
+[⬅ Previous: 1 Environment Setup](1-environment-setup.md) | [Next: 2 Git Version Control ➡](2-git-version-control.md)

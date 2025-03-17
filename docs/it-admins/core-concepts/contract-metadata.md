@@ -1,8 +1,13 @@
 <!-- description: Documentation about Contract Management Metadata and Automation Guide for Your Organization. -->
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
 # Contract Management Metadata and Automation Guide
 
-### 1 Document Set Structure & Metadata
+### Site Navigiation
 
+## Overview
 - Primary Contract Type captures the highest-level classification of the contract (e.g., On-Call Consultant Agreement for multiple Task Orders).
 - Managed Metadata is used for Contract Types instead of Choice fields to allow for future flexibility.
 - The Managed Metadata Term Set for Contract Types was created in the **Term Store** under "Search Directories."

@@ -1,4 +1,7 @@
+<!-- description: Documentation about Understanding SharePoint Document Management for Your Organization. -->
 # Understanding SharePoint Document Management
+
+### Site Navigation
 
 ### What is SharePoint Document Management?
 
@@ -35,3 +38,7 @@ One of the biggest hurdles in transitioning to structured document management is
 To address these challenges, we must transition from **lettered drives** to SharePoint-based **Document Libraries** and adopt a more structured approach to storing, labeling, and retrieving records.
 
 **Next** [2. Metadata: The Key to Smarter Records Organization](2-metadata.md)
+
+---
+
+[⬅ Previous: 0 Tableofcontents](0-tableofcontents.md) | [Next: 2 Metadata ➡](2-metadata.md)

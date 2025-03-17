@@ -1,7 +1,9 @@
 <!-- description: Documentation about Expanding Auto-Labeling to Emails for Your Organization. -->
-# Expanding Auto-Labeling to Emails
 
-### Why Email Retention Matters
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
+
+# Expanding Auto-Labeling to Emails
 
 Email communication often contains critical business records, including contracts, approvals, and legal correspondences. However, managing email retention manually can lead to **accidental deletions, clutter, and compliance risks**. Microsoft Purview extends **auto-labeling and retention policies to Outlook**, ensuring that:
 

@@ -1,9 +1,11 @@
-# Submit Contract
+<!-- description: Documentation about Submit Contract for Your Organization. -->
 
 ### Site Navigation
-[🏠 Home](../../../README.md) | [📂 All Workflows](../../../users/users.md) | [⚙ IT Admin Docs](../../../it-admins/README.md)
-[⬅ Back to contracts](../README.md)
+[🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin Docs](../../../it-admins/README.md) | [⬅ Back to contracts](../README.md)
 
-[⬅ Back to contracts](../README.md)
+# Submit Contract
 
-<!-- description: Documentation about Submit Contract for Your Organization. -->
+## Description
+Documentation about Submit Contract for Your Organization
+
+---

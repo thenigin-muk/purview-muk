@@ -1,4 +1,7 @@
+<!-- description: Documentation about Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot) for Your Organization. -->
 # Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot)
+
+### Site Navigation
 
 ## Overview
 This section provides a detailed guide on **Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot)**, including setup steps and best practices.
@@ -22,5 +25,4 @@ Microsoft 365 licensing determines which compliance features are available. **Ke
 
 ---
 
-### Navigation
-[← Understanding Repository Structure](3-repository-structure.md) | [SharePoint Sites & Libraries Configuration →](5-sharepoint-configuration.md)
+[⬅ Previous: 3 Repository Structure](3-repository-structure.md) | [Next: 5 Sharepoint Configuration ➡](5-sharepoint-configuration.md)

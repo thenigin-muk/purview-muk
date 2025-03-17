@@ -1,7 +1,9 @@
 <!-- description: Documentation about Document Sets: A Smarter Alternative to Folders for Your Organization. -->
-# Document Sets: A Smarter Alternative to Folders
 
-### What is a Document Set?
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
+
+# Document Sets: A Smarter Alternative to Folders
 
 A **Document Set** in SharePoint is a specialized type of folder that groups related documents together while maintaining metadata consistency across all files within the set. Unlike traditional folders, Document Sets ensure that all associated documents share the same classification, retention policies, and search attributes.
 

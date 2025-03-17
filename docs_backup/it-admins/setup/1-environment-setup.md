@@ -1,4 +1,7 @@
+<!-- description: Documentation about Environment Setup & Prerequisites for Your Organization. -->
 # Environment Setup & Prerequisites
+
+### Site Navigation
 
 ## Overview
 This section provides a detailed guide on **Environment Setup & Prerequisites**, including setup steps and best practices.
@@ -25,5 +28,4 @@ ssh-add ~/.ssh/id_rsa
 
 ---
 
-### Navigation
-[Troubleshooting & Common Issues →](10-troubleshooting.md)
+[⬅ Previous: 0 Setup Guide](0-setup-guide.md) | [Next: 10 Troubleshooting ➡](10-troubleshooting.md)

@@ -1,4 +1,7 @@
+<!-- description: Documentation about Graph API Multi-App Security Guide for Your Organization. -->
 # Graph API Multi-App Security Guide
+
+### Site Navigation
 
 ## Overview
 
@@ -73,9 +76,9 @@ To ensure proper security segmentation, follow these steps to create each requir
 3. In workflows, access them securely:
    ```yaml
    env:
-     CLIENT_ID: ${{ secrets.PURVIEW_CLIENT_ID }}
-     CLIENT_SECRET: ${{ secrets.PURVIEW_CLIENT_SECRET }}
-     TENANT_ID: ${{ secrets.TENANT_ID }}
+     CLIENT_ID: $PLACEHOLDER_SECRETS_PURVIEW_CLIENT_ID
+     CLIENT_SECRET: $PLACEHOLDER_SECRETS_PURVIEW_CLIENT_SECRET
+     TENANT_ID: $PLACEHOLDER_SECRETS_TENANT_ID
    ```
 
 ### **Option 2: Environment Variables (For Local Development)**
@@ -136,3 +139,6 @@ Following this structured approach ensures that **each workflow only gets the ac
 
 This guide should be **referenced before implementing API-driven workflows** to ensure secure access to Graph API across different departments and automation workflows.
 
+---
+
+[⬅ Previous: Graph Api Labels](graph-api-labels.md) | [Next: Managed Metadata ➡](managed-metadata.md)

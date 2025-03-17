@@ -1,8 +1,9 @@
 <!-- description: Documentation about Troubleshooting & Common Issues for Your Organization. -->
-# Troubleshooting & Common Issues
 
-## Overview
-This section provides a detailed guide on **Troubleshooting & Common Issues**, including setup steps and best practices.
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
+# Troubleshooting & Common Issues
 
 ## Common Issues & Fixes
 | Issue | Cause | Solution |
@@ -15,11 +16,6 @@ This section provides a detailed guide on **Troubleshooting & Common Issues**, i
 - Follow the step-by-step instructions provided.
 - Ensure all dependencies and configurations are in place.
 - If encountering issues, refer to the [Troubleshooting Guide](10-troubleshooting.md).
-
----
-
-### Navigation
-[← Environment Setup & Prerequisites](1-environment-setup.md) | [Version Control & Git Management →](2-git-version-control.md)
 
 ---
 

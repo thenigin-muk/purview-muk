@@ -1,9 +1,9 @@
-<!-- description: Documentation about Graph API Multi-App Security Guide for {{ organization_name }}. -->
+<!-- description: Documentation about Graph API Multi-App Security Guide for Your Organization. -->
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
 # Graph API Multi-App Security Guide
-
-## Overview
-
-This document outlines the best practices for securely accessing Microsoft Graph API across multiple workflows. Instead of granting excessive permissions to a single application, this guide details how to create **separate** app registrations based on specific functionality.
 
 ---
 
@@ -74,9 +74,9 @@ To ensure proper security segmentation, follow these steps to create each requir
 3. In workflows, access them securely:
    ```yaml
    env:
-     CLIENT_ID: ${{ secrets.PURVIEW_CLIENT_ID }}
-     CLIENT_SECRET: ${{ secrets.PURVIEW_CLIENT_SECRET }}
-     TENANT_ID: ${{ secrets.TENANT_ID }}
+     CLIENT_ID: $PLACEHOLDER_SECRETS_PURVIEW_CLIENT_ID
+     CLIENT_SECRET: $PLACEHOLDER_SECRETS_PURVIEW_CLIENT_SECRET
+     TENANT_ID: $PLACEHOLDER_SECRETS_TENANT_ID
    ```
 
 ### **Option 2: Environment Variables (For Local Development)**

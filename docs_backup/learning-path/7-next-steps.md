@@ -1,4 +1,7 @@
+<!-- description: Documentation about Next Steps & Implementation for Your Organization. -->
 # Next Steps & Implementation
+
+### Site Navigation
 
 ### Implementing SharePoint for Auto-Labeling & Retention
 
@@ -39,3 +42,7 @@ This implementation follows an **incremental approach**, where phases **1 throug
 **By following these structured steps, the organization will transition seamlessly into a modern, automated records retention and compliance system, reducing administrative burden while ensuring compliance and accessibility.**
 
 **Next** [7. Next Steps & Implementation](7-next-steps.md)
+
+---
+
+[⬅ Previous: 6 Compliance Disposition](6-compliance-disposition.md) | [Next: 8 Metadata Training ➡](8-metadata-training.md)

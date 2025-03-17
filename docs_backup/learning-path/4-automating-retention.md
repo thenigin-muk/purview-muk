@@ -1,4 +1,7 @@
+<!-- description: Documentation about Automating Records Retention & Compliance for Your Organization. -->
 # Automating Records Retention & Compliance
+
+### Site Navigation
 
 ### What is Microsoft Purview?
 
@@ -43,3 +46,7 @@ By using metadata-driven auto-labeling and Microsoft Purview, SharePoint can:
 - Ensure compliance with legal & regulatory requirements
 
 [5. Expanding Auto-Labeling to Emails](5-auto-labeling-emails.md)
+
+---
+
+[⬅ Previous: 3 Document Sets](3-document-sets.md) | [Next: 5 Auto Labeling Emails ➡](5-auto-labeling-emails.md)

@@ -1,4 +1,7 @@
+<!-- description: Documentation about Document Sets: A Smarter Alternative to Folders for Your Organization. -->
 # Document Sets: A Smarter Alternative to Folders
+
+### Site Navigation
 
 ### What is a Document Set?
 
@@ -35,3 +38,7 @@ A **Document Set** in SharePoint is similar to a folder but with key improvement
 - Users can easily access related records in one place
 
 **Next** [4. Automating Records Retention & Compliance](4-automating-retention.md)
+
+---
+
+[⬅ Previous: 2 Metadata](2-metadata.md) | [Next: 4 Automating Retention ➡](4-automating-retention.md)

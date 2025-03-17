@@ -1,8 +1,9 @@
 <!-- description: Documentation about Managed Metadata & Term Sets in SharePoint for Your Organization. -->
-# Managed Metadata & Term Sets in SharePoint
 
-## Why Managed Metadata Matters
-Managed Metadata allows organizations to standardize classification across SharePoint libraries. Instead of manually entering values, predefined **Term Sets** ensure consistency, reduce errors, and improve searchability.
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to core-concepts](../README.md)
+
+# Managed Metadata & Term Sets in SharePoint
 
 ## How Term Sets Work
 - Term Sets are **centrally managed** in the **SharePoint Term Store**.

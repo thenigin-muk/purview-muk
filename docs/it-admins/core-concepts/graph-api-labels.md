@@ -1,8 +1,11 @@
 <!-- description: Documentation about Microsoft Graph API Endpoints for Label Management for Your Organization. -->
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
 # Microsoft Graph API Endpoints for Label Management
 
-**Microsoft Documentation Reference**
-
+## Overview
 For the most up-to-date and comprehensive details on managing retention labels through Graph API, refer to Microsoft's official documentation:
 
 - [Microsoft Graph API: Retention Labels](https://learn.microsoft.com/en-us/graph/api/resources/security-retentionlabel?view=graph-rest-1.0)

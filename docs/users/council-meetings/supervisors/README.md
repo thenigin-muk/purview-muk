@@ -1,9 +1,6 @@
-# Supervisor Guides for council-meetings
+# Supervisor Guides for Council Meetings
 
 ### Site Navigation
-[🏠 Home](../../../README.md) | [📂 All Workflows](../../../users/users.md) | [⚙ IT Admin Docs](../../../it-admins/README.md)
-[⬅ Back to council-meetings](../README.md)
-
-[⬅ Back to council-meetings](../README.md)
-
-This folder contains guidelines and policies for supervisors managing the **council-meetings** workflow.
+[🏠 Home](../../../README.md) | **#** | **Topic** | **Description** | **Link** |
+|---|---|---|---|
+| 1 | Submit New Meeting | Documentation about Submit New Meeting for Your Organization. | [Submit New Meeting](submit-new-meeting.md) |

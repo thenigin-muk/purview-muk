@@ -1,7 +1,9 @@
+<!-- description: Documentation about Contract Management Metadata and Automation Guide for Your Organization. -->
 # Contract Management Metadata and Automation Guide
 
-### 1 Document Set Structure & Metadata
+### Site Navigiation
 
+## Overview
 - Primary Contract Type captures the highest-level classification of the contract (e.g., On-Call Consultant Agreement for multiple Task Orders).
 - Managed Metadata is used for Contract Types instead of Choice fields to allow for future flexibility.
 - The Managed Metadata Term Set for Contract Types was created in the **Term Store** under "Search Directories."
@@ -76,3 +78,7 @@ This automation ensures that contract numbers are always assigned in order witho
 2. Finalize and test JSON formatting for contract number display.
 3. Confirm Managed Metadata Term Set structure.
 4. Plan and develop PowerApps interface in the future.
+
+---
+
+[Next: Example Graph Json ➡](example-graph-json.md)

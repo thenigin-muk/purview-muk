@@ -1,14 +1,13 @@
-# IT Administrator Documentation
+# PCard
 
 ### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md)
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](README.md)
 
-Resources for IT Administrators implementing and maintaining Records Management solutions.
+## Contents
 
-| **Section** | **Description** | **Link** |
-|---|---|---|
-| Setup Guides | Step-by-step setup instructions | [Link](setup/0-setup-guide.md) |
-| Core Concepts | Fundamental concepts for administrators | [Link](core-concepts/) |
-| Contracts | Contract workflow configuration | [Link](contracts/setup/) |
-| Purview | Microsoft Purview configuration | [Link](purview/setup/) |
-| Purchase Cards | Purchase cards system setup | [Link](purchase-cards/setup/) |
+| **#** | **Topic** | **Description** | **Link** |
+|---|---|---|---|
+| 1 | Core Concepts | ### Site Navigation [🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admi... | [Core Concepts](core-concepts/) |
+| 2 | Setup | Documentation for Setup | [Setup](setup/) |
+| 3 | Solutions | Documentation for Solutions | [Solutions](solutions/) |
+| 4 | Workflows | Documentation for Workflows | [Workflows](workflows/) |

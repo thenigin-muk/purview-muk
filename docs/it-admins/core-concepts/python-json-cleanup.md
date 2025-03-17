@@ -1,10 +1,11 @@
 <!-- description: Documentation about Python Script for Cleaning Up and Formatting JSON for Graph API for Your Organization. -->
+
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
 # Python Script for Cleaning Up and Formatting JSON for Graph API
 
-### Overview
-
-Once JSON data is retrieved, it needs to be cleaned and formatted before uploading it to SharePoint via Microsoft Graph API. The following Python script automates this process.
-
+## Overview
 **Python Script**
 ```python
 import requests
@@ -140,4 +141,4 @@ print(f"Transformed data saved to {OUTPUT_FILE}")
 
 ---
 
-[⬅ Previous: Managed Metadata](managed-metadata.md) | [Next: Rest Api Guide ➡](rest-api-guide.md)
+[⬅ Previous: Managed Metadata](managed-metadata.md)

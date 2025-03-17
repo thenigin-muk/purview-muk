@@ -1,7 +1,9 @@
 <!-- description: Documentation about Metadata: The Key to Smarter Records Organization for Your Organization. -->
-# Metadata: The Key to Smarter Records Organization
 
-### What is Metadata?
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
+
+# Metadata: The Key to Smarter Records Organization
 
 Metadata is **“data about data”**—it provides descriptive information about a document, allowing for better organization and searchability.
 

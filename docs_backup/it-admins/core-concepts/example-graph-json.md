@@ -1,6 +1,9 @@
+<!-- description: Documentation about Example JSON Ready for Graph API for Your Organization. -->
 # Example JSON Ready for Graph API
 
-**Overview**
+### Site Navigation
+
+## Overview
 
 To properly integrate the cleaned retention data into Microsoft Purview, the JSON must be formatted according to Graph API requirements. Below is an example of how the structured JSON should look before being sent via a PATCH or PUT request to Graph API.
 
@@ -29,3 +32,7 @@ To properly integrate the cleaned retention data into Microsoft Purview, the JSO
     }
 }
 ```
+
+---
+
+[⬅ Previous: Contract Metadata](contract-metadata.md) | [Next: Graph Api Guide ➡](graph-api-guide.md)

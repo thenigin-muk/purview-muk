@@ -1,7 +1,11 @@
 <!-- description: Documentation about Next Steps & Implementation for Your Organization. -->
+
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
+
 # Next Steps & Implementation
 
-### Implementing SharePoint for Auto-Labeling & Retention
+## Implementing SharePoint for Auto-Labeling & Retention
 
 This implementation follows an **incremental approach**, where phases **1 through 3 are looped for each workflow within a department or division** rather than applied organization-wide all at once. This ensures staff are not overwhelmed with changes and can adapt as each workflow is introduced, refined, and optimized. Each workflow serves as a learning experience, making subsequent implementations smoother and more efficient.
 

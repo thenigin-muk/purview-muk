@@ -1,7 +1,9 @@
 <!-- description: Documentation about Metadata Training and Reference Guide for Your Organization. -->
-# Metadata Training and Reference Guide
 
-### **Section 1: Training & How-to Instructions**
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](0-tableofcontents.md)
+
+# Metadata Training and Reference Guide
 
 ### **What is Metadata?**
 
@@ -170,4 +172,4 @@ Metadata describes documents, making them easier to organize, find, and manage. 
 
 ---
 
-[⬅ Previous: 7 Next Steps](7-next-steps.md) | 
+[⬅ Previous: 7 Next Steps](7-next-steps.md)

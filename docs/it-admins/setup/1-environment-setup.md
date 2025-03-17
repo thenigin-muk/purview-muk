@@ -1,8 +1,9 @@
 <!-- description: Documentation about Environment Setup & Prerequisites for Your Organization. -->
-# Environment Setup & Prerequisites
 
-## Overview
-This section provides a detailed guide on **Environment Setup & Prerequisites**, including setup steps and best practices.
+### Site Navigation
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../README.md)
+
+# Environment Setup & Prerequisites
 
 ## Prerequisites
 - Windows Subsystem for Linux (WSL) or a virtual environment
@@ -23,11 +24,6 @@ ssh-add ~/.ssh/id_rsa
 - Follow the step-by-step instructions provided.
 - Ensure all dependencies and configurations are in place.
 - If encountering issues, refer to the [Troubleshooting Guide](10-troubleshooting.md).
-
----
-
-### Navigation
-[Troubleshooting & Common Issues →](10-troubleshooting.md)
 
 ---
 
