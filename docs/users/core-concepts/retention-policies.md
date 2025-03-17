@@ -7,9 +7,8 @@
 
 ## Description
 Description
----
 
-[⬅ Previous: Metadata Guide](metadata-guide.md) | [Next: Sharepoint Migration ➡](sharepoint-migration.md)
+---
 
 ---
 

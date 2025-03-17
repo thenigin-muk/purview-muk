@@ -9,9 +9,8 @@
 
 ## Description
 This Document Explains the SharePoint Migration process.
----
 
-[⬅ Previous: Retention Policies](retention-policies.md)
+---
 
 ---
 
