@@ -3,7 +3,7 @@
 # Understanding SharePoint Document Management
 
 ### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](../learning-path/0-tableofcontents.md)
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [⬅ Back to Learning Path](../README.md)
 
 SharePoint is a **cloud-based collaboration platform** that enables teams to store, organize, and manage documents efficiently. Unlike traditional Windows File Servers, which rely on **lettered drives and deep folder structures**, SharePoint introduces a more flexible and metadata-driven approach to document organization.
 

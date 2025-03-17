@@ -3,7 +3,7 @@
 # Automating Records Retention & Compliance
 
 ### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](../learning-path/0-tableofcontents.md)
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [⬅ Back to Learning Path](../README.md)
 
 Microsoft Purview is a **compliance and data governance platform** that integrates with SharePoint to help organizations **automate records retention, classification, and security policies**. By leveraging metadata, Purview ensures that records are stored, retained, and disposed of in accordance with legal and organizational policies.
 

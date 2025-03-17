@@ -3,7 +3,7 @@
 # Retention Policies
 
 ### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to core-concepts](../README.md)
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to Core Concepts](../README.md)
 
 ## Description
 Description

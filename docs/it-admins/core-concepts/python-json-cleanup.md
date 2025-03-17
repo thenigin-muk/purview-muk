@@ -3,7 +3,7 @@
 # Python Script for Cleaning Up and Formatting JSON for Graph API
 
 ### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
+[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to Core Concepts](../README.md)
 
 ## Overview
 **Python Script**

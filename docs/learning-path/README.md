@@ -1,7 +1,12 @@
+<!-- description: Step-by-step training guide for new users. -->
+
 # Learning Path
 
 ### Site Navigation
-[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [📚 Table of Contents](../learning-path/0-tableofcontents.md)
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md)
+
+## Description
+Step-by-step training guide for new users.
 
 ## Contents
 
