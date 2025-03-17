@@ -1,7 +1,7 @@
 # Council Meetings
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [Users](../README.md) > [Council Meetings](README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
+[🏠 Home](../../README.md) > [Users](../README.md) > [Council Meetings](README.md)
 
 |---|---|---|---|
 | 1 | Supervisors | ### Site Navigation [🏠 Home](../../../README.md) | [📂 All Workflows](../../users.md) | [⚙ IT Admin D... | [Supervisors](supervisors/) |

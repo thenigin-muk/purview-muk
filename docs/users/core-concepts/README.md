@@ -1,7 +1,7 @@
 # core-concepts
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [Users](../README.md) > [Core Concepts](README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
+[🏠 Home](../../README.md) > [Users](../README.md) > [Core Concepts](README.md)
 
 |---|---|---|---|
 | 1 | Metadata Guide | Documentation about Managed Metadata & Term Sets in SharePoint for Your Organization. | [Metadata Guide](metadata-guide.md) |

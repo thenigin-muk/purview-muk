@@ -3,7 +3,7 @@
 # Sharepoint
 
 ### Site Navigation
-[🏠 Home](../../../README.md) > [It Admins](../../README.md) > [Solutions](../README.md) > [Sharepoint](README.md) | [📂 All Workflows](../../../users/users.md) | [⚙ IT Admin Docs](../../../it-admins/README.md)
+[🏠 Home](../../../README.md) > [It Admins](../../README.md) > [Solutions](../README.md) > [Sharepoint](README.md)
 
 ## Description
 Documentation about sharepoint

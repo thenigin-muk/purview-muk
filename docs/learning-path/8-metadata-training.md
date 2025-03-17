@@ -3,7 +3,7 @@
 # Metadata Training and Reference Guide
 
 ### Site Navigation
-[🏠 Home](../README.md) > [Learning Path](README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [⬅ Back to Learning Path](README.md)
+[🏠 Home](../README.md) > [Learning Path](README.md) | [⬅ Back to Learning Path](../README.md)
 
 ### **What is Metadata?**
 

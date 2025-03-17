@@ -1,7 +1,7 @@
 # Training Materials for purchase-cards
 
 ### Site Navigation
-[🏠 Home](../../../README.md) > [Users](../../README.md) > [Purchase Cards](../README.md) > [Training](README.md) | [📂 All Workflows](../../../users/users.md) | [⚙ IT Admin Docs](../../../it-admins/README.md)
+[🏠 Home](../../../README.md) > [Users](../../README.md) > [Purchase Cards](../README.md) > [Training](README.md)
 
 ## Description
 

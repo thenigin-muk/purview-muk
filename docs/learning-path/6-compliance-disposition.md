@@ -3,7 +3,7 @@
 # Compliance Manager & Disposition Review
 
 ### Site Navigation
-[🏠 Home](../README.md) > [Learning Path](README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md) | [⬅ Back to Learning Path](README.md)
+[🏠 Home](../README.md) > [Learning Path](README.md) | [⬅ Back to Learning Path](../README.md)
 
 In addition to managing retention and labeling, **Microsoft Purview Compliance Manager** provides tools for overseeing **public records requests, legal holds, and compliance audits**. This ensures that metadata-driven records management is **not just about retention but also about accessibility and legal accountability.**
 

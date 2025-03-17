@@ -435,13 +435,13 @@ def generate_navigation(file_path, config):
     top_nav += generate_breadcrumb_navigation(file_path)
     
     # Add common links
-    workflows_path = get_relative_path("users/users.md", file_path)
-    admin_path = get_relative_path("it-admins/README.md", file_path)
-    top_nav += f" | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})"
+    #workflows_path = get_relative_path("users/users.md", file_path)
+    #admin_path = get_relative_path("it-admins/README.md", file_path)
+    #top_nav += f" | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})"
     
     # Add back link to parent folder for non-README files
     if file_path.name.lower() != "readme.md":
-        back_path = "README.md"
+        back_path = "../README.md"
         parent_folder = file_path.parent.name.replace('-', ' ').title()
         top_nav += f" | [⬅ Back to {parent_folder}]({back_path})"
     

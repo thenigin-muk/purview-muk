@@ -1,7 +1,7 @@
 # Purview
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [Users](../README.md) > [Purview](README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
+[🏠 Home](../../README.md) > [Users](../README.md) > [Purview](README.md)
 
 |---|---|---|---|
 | 1 | Ediscovery | Documentation for Ediscovery | [Ediscovery](ediscovery/) |

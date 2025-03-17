@@ -3,7 +3,7 @@
 # PCard Statement Workflow 
 
 ### Site Navigation
-[🏠 Home](../../README.md) > [Users](../README.md) > [Purchase Cards](README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to Purchase Cards](README.md)
+[🏠 Home](../../README.md) > [Users](../README.md) > [Purchase Cards](README.md) | [⬅ Back to Purchase Cards](../README.md)
 
 This project automates the creation, management, and tracking of Purchase Card (PCard) statements in SharePoint using Power Automate. It is specifically structured to ensure compliance with the Washington Public Records Act (PRA) by organizing data efficiently, applying detailed metadata, and leveraging Microsoft Purview’s advanced Records Management and eDiscovery capabilities.
 
