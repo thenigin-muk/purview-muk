@@ -31,7 +31,6 @@ To properly integrate the cleaned retention data into Microsoft Purview, the JSO
 }
 ```
 
-
 ---
 
 [⬅ Previous: Contract Metadata](contract-metadata.md) | [Next: Graph Api Guide ➡](graph-api-guide.md)

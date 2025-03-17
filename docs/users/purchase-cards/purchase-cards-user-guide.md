@@ -135,7 +135,6 @@ Each Power Automate flow is **fully detailed** below, including setup steps, act
 
 This document ensures complete transparency, accuracy, and clarity in executing and maintaining the automation of the PCard statement management workflow.
 
-
 ---
 
 [Next: Submit Pcard ➡](submit-pcard.md)

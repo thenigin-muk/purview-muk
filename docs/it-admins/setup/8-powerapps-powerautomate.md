@@ -4,7 +4,6 @@
 ## Overview
 This section provides a detailed guide on **Power Automate & PowerApps Integration**, including setup steps and best practices.
 
-
 ## Next Steps
 - Follow the step-by-step instructions provided.
 - Ensure all dependencies and configurations are in place.
@@ -14,7 +13,6 @@ This section provides a detailed guide on **Power Automate & PowerApps Integrati
 
 ### Navigation
 [← API Integration & Script Execution](7-api-and-scripts.md) | [Deployment & Change Management →](9-deployment.md)
-
 
 ---
 

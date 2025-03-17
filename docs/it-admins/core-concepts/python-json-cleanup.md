@@ -138,7 +138,6 @@ print(f"Transformed data saved to {OUTPUT_FILE}")
 3. **Automated Labeling**
     - Utilize automation to auto-label documents based on predefined metadata and configurations.
 
-
 ---
 
 [⬅ Previous: Managed Metadata](managed-metadata.md) | [Next: Rest Api Guide ➡](rest-api-guide.md)

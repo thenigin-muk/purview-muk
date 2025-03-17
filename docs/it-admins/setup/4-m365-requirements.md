@@ -26,7 +26,6 @@ Microsoft 365 licensing determines which compliance features are available. **Ke
 ### Navigation
 [← Understanding Repository Structure](3-repository-structure.md) | [SharePoint Sites & Libraries Configuration →](5-sharepoint-configuration.md)
 
-
 ---
 
 [⬅ Previous: 3 Repository Structure](3-repository-structure.md) | [Next: 5 Sharepoint Configuration ➡](5-sharepoint-configuration.md)

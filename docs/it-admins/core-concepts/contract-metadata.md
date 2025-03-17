@@ -78,7 +78,6 @@ This automation ensures that contract numbers are always assigned in order witho
 3. Confirm Managed Metadata Term Set structure.
 4. Plan and develop PowerApps interface in the future.
 
-
 ---
 
 [Next: Example Graph Json ➡](example-graph-json.md)

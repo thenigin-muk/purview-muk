@@ -137,8 +137,6 @@ Following this structured approach ensures that **each workflow only gets the ac
 
 This guide should be **referenced before implementing API-driven workflows** to ensure secure access to Graph API across different departments and automation workflows.
 
-
-
 ---
 
 [⬅ Previous: Graph Api Labels](graph-api-labels.md) | [Next: Managed Metadata ➡](managed-metadata.md)

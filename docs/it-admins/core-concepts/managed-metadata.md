@@ -34,7 +34,6 @@ Before implementing workflows, organizations **must decide** on the **term sets*
 - **Document all Term Sets** in `managed-metadata.json` for automation.
 - **Use Power Automate or Graph API** to integrate term sets into metadata.
 
-
 ---
 
 [⬅ Previous: Graph Api Security](graph-api-security.md) | [Next: Python Json Cleanup ➡](python-json-cleanup.md)

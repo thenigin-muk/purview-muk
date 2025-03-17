@@ -10,7 +10,6 @@ For the most up-to-date and comprehensive details on managing retention labels t
 
 ### API Reference Table
 
-
 | **Action** | **HTTP Method** | **Endpoint** |
 | --- | --- | --- |
 | Get all retention labels | GET | <https://graph.microsoft.com/v1.0/security/labels/retentionLabels> |
@@ -46,7 +45,6 @@ print(response.json())
 ### Summary
 
 This script provides a structured approach for selecting retention policies before pushing them to Purview, ensuring compliance and automation in records management.
-
 
 ---
 

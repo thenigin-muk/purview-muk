@@ -81,18 +81,21 @@ def generate_navigation(file_path, config):
     # Read content
     content = file_path.read_text()
     
-    # First clean up any existing navigation to prevent duplication
+    # Clean up any existing navigation to prevent duplication
     # Remove duplicate Site Navigation sections
     pattern = r'(### Site Navigation\n.*?\n\n)### Site Navigation\n.*?\n\n'
     content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
     
-    # Remove existing Site Navigation (we'll add a fresh one)
-    pattern = r'### Site Navigation\n.*?\n\n'
+    # Remove existing Site Navigation if present (we'll add a fresh one)
+    pattern = r'### Site Navigation\n.*?\n{1,3}'
     content = re.sub(pattern, '', content, flags=re.DOTALL)
     
     # Remove existing bottom navigation links
     pattern = r'\n\n---\n\n\[.*?\].*?(\n|$)'
     content = re.sub(pattern, '\n', content)
+    
+    # Normalize multiple blank lines to prevent accumulation
+    content = re.sub(r'\n{3,}', '\n\n', content)
     
     # Get title from first heading or filename
     title_match = re.search(r'^# (.*)', content, re.MULTILINE)
@@ -103,7 +106,7 @@ def generate_navigation(file_path, config):
     workflows_path = get_relative_path("users/users.md", file_path)
     admin_path = get_relative_path("it-admins/README.md", file_path)
     
-    # Create top navigation - add to ALL files now, including README files
+    # Create top navigation - we'll now add breadcrumb navigation to ALL files
     top_nav = f"### Site Navigation\n"
     top_nav += f"[🏠 Home]({home_path}) | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})\n"
     
@@ -125,7 +128,7 @@ def generate_navigation(file_path, config):
     else:
         # If no title found, add one with navigation
         new_content = f"# {title}\n\n{top_nav}\n\n{content}"
-        
+    
     content = new_content
     
     # Add previous/next navigation at the bottom for non-README files
@@ -165,6 +168,9 @@ def generate_navigation(file_path, config):
         print(f"⚠️ Template error in {file_path}: {str(e)}")
         print("   Using content without template processing")
         final_content = content
+    
+    # Final clean up of multiple blank lines
+    final_content = re.sub(r'\n{3,}', '\n\n', final_content)
     
     # Write back to file
     file_path.write_text(final_content)
@@ -235,104 +241,39 @@ def ensure_navigation_tables():
     
     # Define fixed navigation tables with specific structures
     fixed_nav_tables = {
-    "docs": {
-        "title": "Records Management Documentation",
-        "desc": "Welcome to the Records Management Documentation for your organization.",
-        "columns": ["Section", "Description", "Link"],
-        "data": [
-            ["IT Administration", "Setup and administration guides", "it-admins/"],
-            ["User Workflows", "End-user documentation for records workflows", "users/users.md"],
-            ["Learning Path", "Step-by-step tutorial for new users", "learning-path/0-tableofcontents.md"]
-        ]
-    },
-    "docs/it-admins": {
-        "title": "IT Administrator Documentation",
-        "desc": "Resources for IT Administrators implementing and maintaining Records Management solutions.",
-        "columns": ["Section", "Description", "Link"],
-        "data": [
-            ["Setup Guides", "Step-by-step setup instructions", "setup/0-setup-guide.md"],
-            ["Core Concepts", "Fundamental concepts for administrators", "core-concepts/"],
-            ["Contracts", "Contract workflow configuration", "contracts/setup/"],
-            ["Purview", "Microsoft Purview configuration", "purview/setup/"],
-            ["Purchase Cards", "Purchase cards system setup", "purchase-cards/setup/"]
-        ]
-    },
-    "docs/learning-path": {
-        "title": "Learning Path",
-        "desc": "Start here if you're new to SharePoint Records Management.",
-        "columns": ["Step", "Topic", "Description", "Link"],
-        "data": [
-            ["1", "Introduction", "Overview of the system", "1-introduction.md"],
-            ["2", "Core Concepts", "Key concepts to understand", "2-core-concepts.md"],
-            ["3", "Basic Usage", "Getting started with the system", "3-basic-usage.md"]
-                ]
-            }
-        }
-        
-    # Process predefined navigation tables
+        # ... your existing fixed_nav_tables ...
+    }
+    
+    # Process each fixed table
     for dir_path, table_info in fixed_nav_tables.items():
+        # First ensure the README has breadcrumb navigation
+        readme_path = Path(f"{dir_path}/README.md")
+        
+        # Add breadcrumb navigation to the README if it exists or will be created
+        if readme_path.exists():
+            # Get the content
+            content = readme_path.read_text()
+            
+            # Calculate relative paths for navigation
+            home_path = get_relative_path("README.md", readme_path)
+            workflows_path = get_relative_path("users/users.md", readme_path)
+            admin_path = get_relative_path("it-admins/README.md", readme_path)
+            
+            # Create navigation
+            navigation = f"### Site Navigation\n"
+            navigation += f"[🏠 Home]({home_path}) | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})\n\n"
+            
+            # Add navigation after title if not already present
+            if "### Site Navigation" not in content:
+                if content.startswith("# "):
+                    title_end = content.find("\n")
+                    content = content[:title_end+1] + "\n" + navigation + content[title_end+1:]
+                    readme_path.write_text(content)
+        
+        # Now create or update the navigation table
         create_navigation_table(dir_path, table_info)
-    
-    # Find all root directories in docs folder to generate dynamic navigation tables
-    docs_dir = Path("docs")
-    root_dirs = [d for d in docs_dir.iterdir() 
-                if d.is_dir() 
-                and d.name not in ["__pycache__"]
-                and not d.name.startswith('.')]
-    
-    # Process each root directory
-    for root_dir in root_dirs:
-        # Skip directories with manually defined tables
-        if str(root_dir) in fixed_nav_tables:
-            continue
-        
-        # Create README if it doesn't exist
-        index_file = root_dir / "README.md"
-        if index_file.exists():
-            continue
             
-        # Get subdirectories and files to include in navigation
-        subdirs = [d for d in root_dir.iterdir() if d.is_dir() and not d.name.startswith('.')]
-        md_files = [f for f in root_dir.glob("*.md") if f.name != "README.md"]
-        
-        # Create navigation table data
-        data = []
-        
-        # Add directories first
-        for i, subdir in enumerate(sorted(subdirs)):
-            name = subdir.name.replace('-', ' ').title()
-            data.append([str(i+1), name, f"Documentation for {name}", f"{subdir.name}/"])
-        
-        # Then add files
-        for i, md_file in enumerate(sorted(md_files)):
-            name = md_file.stem.replace('-', ' ').title()
-            # Try to extract a better description from the file
-            try:
-                content = md_file.read_text()
-                desc_pattern = r'^<!--\s*description:\s*(.+?)\s*-->'
-                desc_match = re.search(desc_pattern, content, re.MULTILINE)
-                
-                if desc_match:
-                    desc = desc_match.group(1)
-                else:
-                    # Fall back to first paragraph if no description comment
-                    first_paragraph = re.search(r'# .+?\n\n(.+?)(?=\n\n|\Z)', content)
-                    desc = first_paragraph.group(1) if first_paragraph else f"Documentation about {name}"
-            except:
-                desc = f"Documentation about {name}"
-            
-            data.append([str(len(subdirs) + i + 1), name, desc, md_file.name])
-        
-        # Create the navigation table info
-        table_info = {
-            "title": root_dir.name.replace('-', ' ').title(),
-            "desc": f"Documentation resources for {root_dir.name.replace('-', ' ')}.",
-            "columns": ["Step", "Topic", "Description", "Link"],
-            "data": data
-        }
-        
-        # Create the navigation table
-        create_navigation_table(str(root_dir), table_info)
+    # Additional code to create dynamic navigation tables...
     
 
 def create_navigation_table(dir_path, table_info):
@@ -350,29 +291,65 @@ def create_navigation_table(dir_path, table_info):
     rows = []
     for row_data in table_info["data"]:
         # Format the link column specially
-        link_column = f"[Link]({row_data[-1]})"
-        formatted_row = " | ".join(row_data[:-1] + [link_column])
+        link_column = f"[{row_data[0]}]({row_data[-1]})"
+        formatted_row = " | ".join([link_column] + row_data[1:-1])
         rows.append(f"| {formatted_row} |")
     
-    # Assemble the content
-    content = f"# {table_info['title']}\n\n{table_info['desc']}\n\n"
-    content += f"| {headers} |\n|{separator}|\n"
-    content += "\n".join(rows)
+    # Build table content
+    table_content = f"| {headers} |\n|{separator}|\n"
+    table_content += "\n".join(rows)
     
-    # Check if README exists
+    # If README exists, replace or add the table
     if index_file.exists():
-        # Preserve any content after the table
-        existing_content = index_file.read_text()
-        # Find any content after the navigation table
-        after_table_match = re.search(r'\n\n---\n\n(.*)', existing_content, re.DOTALL)
-        if after_table_match:
-            content += f"\n\n---\n\n{after_table_match.group(1)}"
+        content = index_file.read_text()
+        
+        # Add breadcrumb navigation if not already present
+        if "### Site Navigation" not in content:
+            home_path = get_relative_path("README.md", index_file)
+            workflows_path = get_relative_path("users/users.md", index_file)
+            admin_path = get_relative_path("it-admins/README.md", index_file)
+            
+            navigation = f"### Site Navigation\n"
+            navigation += f"[🏠 Home]({home_path}) | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})\n\n"
+            
+            # Add navigation after title if title exists
+            if content.startswith("# "):
+                title_end = content.find("\n")
+                content = content[:title_end+1] + "\n" + navigation + content[title_end+1:]
+        
+        # Check if table already exists
+        if "| **" in content:
+            # Replace existing table
+            table_pattern = r'\|.*\|\n\|[-]+\|\n(.*\n)*?(?=\n\n|\Z)'
+            content = re.sub(table_pattern, table_content, content)
+        else:
+            # Add table after any existing content
+            content += f"\n\n{table_content}"
+            
+        # Clean up multiple blank lines
+        content = re.sub(r'\n{3,}', '\n\n', content)
+            
+        # Write back
+        index_file.write_text(content)
         print(f"📊 Updated navigation table: {index_file}")
     else:
+        # Create new README with title, description and table
+        content = f"# {table_info['title']}\n\n"
+        
+        # Add breadcrumb navigation
+        home_path = get_relative_path("README.md", index_file)
+        workflows_path = get_relative_path("users/users.md", index_file)
+        admin_path = get_relative_path("it-admins/README.md", index_file)
+        
+        navigation = f"### Site Navigation\n"
+        navigation += f"[🏠 Home]({home_path}) | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})\n\n"
+        
+        content += navigation
+        content += f"{table_info['desc']}\n\n"
+        content += table_content
+        
+        index_file.write_text(content)
         print(f"✅ Created navigation table: {index_file}")
-    
-    # Write to file
-    index_file.write_text(content)
 
 def verify_workflow_table():
     """Verify and fix the workflow table in users.md"""

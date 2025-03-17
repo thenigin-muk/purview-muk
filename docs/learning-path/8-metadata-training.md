@@ -166,6 +166,7 @@ Metadata describes documents, making them easier to organize, find, and manage. 
 - Easily cross-reference documents via hyperlinks.
 - Future automation opportunities include notifications and financial updates via Power Automate.
 
+**Next** [That's everything (for now), head to the Users folder to find training for your new workflows](../users/users.md)
 
 ---
 

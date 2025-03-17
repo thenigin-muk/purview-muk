@@ -1,5 +1,9 @@
 # Learning Path
 
+### Site Navigation
+[🏠 Home](../README.md) | [📂 All Workflows](../users/users.md) | [⚙ IT Admin Docs](../it-admins/README.md)
+[📚 Back to Table of Contents](../learning-path/0-tableofcontents.md)
+
 Start here if you're new to SharePoint Records Management.
 
 | **Step** | **Topic** | **Description** | **Link** |
