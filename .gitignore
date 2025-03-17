@@ -1,2 +1,13 @@
 *.sh
 *.txt
+
+# Allow specific shell scripts
+!update-itadmin-setup-guides.sh
+!requirements.txt
+!setup.sh
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+*.pyo

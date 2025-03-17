@@ -1,3 +1,4 @@
+<!-- description: Documentation about Using the REST API to Collect JSON from State Archives for Your Organization. -->
 # Using the REST API to Collect JSON from State Archives
 
 ### Overview
@@ -46,3 +47,9 @@ To store the retrieved JSON in SharePoint, you can:
 
 - Save the JSON as a file in a SharePoint document library.
 - Process the data and insert relevant fields into a SharePoint list.
+
+
+
+---
+
+[⬅ Previous: Python Json Cleanup](python-json-cleanup.md) | 

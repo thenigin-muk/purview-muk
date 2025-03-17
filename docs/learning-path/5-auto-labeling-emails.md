@@ -1,3 +1,4 @@
+<!-- description: Documentation about Expanding Auto-Labeling to Emails for Your Organization. -->
 # Expanding Auto-Labeling to Emails
 
 ### Why Email Retention Matters
@@ -32,3 +33,8 @@ Microsoft Purview extends auto-labeling beyond SharePoint to Outlook, ensuring t
 - Retained or deleted according to compliance requirements.
 
 **Next** [6. Compliance Manager & Disposition Review](6-compliance-disposition.md)
+
+
+---
+
+[⬅ Previous: 4 Automating Retention](4-automating-retention.md) | [Next: 6 Compliance Disposition ➡](6-compliance-disposition.md)

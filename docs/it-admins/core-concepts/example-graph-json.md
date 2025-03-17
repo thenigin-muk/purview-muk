@@ -1,3 +1,4 @@
+<!-- description: Documentation about Example JSON Ready for Graph API for Your Organization. -->
 # Example JSON Ready for Graph API
 
 **Overview**
@@ -29,3 +30,9 @@ To properly integrate the cleaned retention data into Microsoft Purview, the JSO
     }
 }
 ```
+
+
+
+---
+
+[⬅ Previous: Contract Metadata](contract-metadata.md) | [Next: Graph Api Guide ➡](graph-api-guide.md)

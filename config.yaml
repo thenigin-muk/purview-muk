@@ -1,0 +1,8 @@
+contact_email: records@example.gov
+department: Records Management
+organization_name: Your Organization
+paths:
+  admin_dir: docs/it-admins
+  docs_dir: docs
+  workflows_dir: docs/users
+state_name: Your State

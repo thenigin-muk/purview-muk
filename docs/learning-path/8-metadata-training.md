@@ -1,3 +1,4 @@
+<!-- description: Documentation about Metadata Training and Reference Guide for Your Organization. -->
 # Metadata Training and Reference Guide
 
 ### **Section 1: Training & How-to Instructions**
@@ -166,3 +167,9 @@ Metadata describes documents, making them easier to organize, find, and manage. 
 - Future automation opportunities include notifications and financial updates via Power Automate.
 
 **Next** [That's everything (for now), head to the Users folder to find training for your new workflows](../users/users.md)
+
+
+
+---
+
+[⬅ Previous: 7 Next Steps](7-next-steps.md) | 

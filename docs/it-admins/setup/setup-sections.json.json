@@ -1,0 +1,12 @@
+{
+    "1-environment-setup.md": "Environment Setup & Prerequisites",
+    "2-git-version-control.md": "Version Control & Git Management",
+    "3-repository-structure.md": "Understanding Repository Structure",
+    "4-m365-requirements.md": "Microsoft 365 Requirements (Licensing, G3 vs. G5, Purview, Copilot)",
+    "5-sharepoint-configuration.md": "SharePoint Sites & Libraries Configuration",
+    "6-purview-configuration.md": "Microsoft Purview Compliance Configuration",
+    "7-api-and-scripts.md": "API Integration & Script Execution",
+    "8-powerapps-powerautomate.md": "Power Automate & PowerApps Integration",
+    "9-deployment.md": "Deployment & Change Management",
+    "10-troubleshooting.md": "Troubleshooting & Common Issues"
+}

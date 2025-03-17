@@ -1,3 +1,4 @@
+<!-- description: Documentation about Compliance Manager & Disposition Review for Your Organization. -->
 # Compliance Manager & Disposition Review
 
 ### Using Microsoft Purview Compliance Manager
@@ -21,3 +22,8 @@ Imagine a scenario where a **public records request** is submitted regarding a v
 Microsoft Purview acts as the **banker’s box** of electronic records management—ensuring all documents are retained, discoverable, and **ready for audits or legal inquiries.**
 
 **Next** 
+
+
+---
+
+[⬅ Previous: 5 Auto Labeling Emails](5-auto-labeling-emails.md) | [Next: 7 Next Steps ➡](7-next-steps.md)

@@ -1,3 +1,4 @@
+<!-- description: Documentation about 📚 Table of Contents for Your Organization. -->
 # 📚 Table of Contents
 
 ## **1️⃣ Learning Path for Users**
@@ -11,3 +12,8 @@ This section provides structured training for general users on how to manage doc
 - [6. Compliance Manager & Disposition Review](6-compliance-disposition.md)
 - [7. Next Steps & Implementation](7-next-steps.md)
 - [8. Metadata Training Guide](8-metadata-training.md)
+
+
+---
+
+[Next: 1 Sharepoint Management ➡](1-sharepoint-management.md)

@@ -1,3 +1,4 @@
+<!-- description: Documentation about Email-retention Workflow - Metadata Schema for Your Organization. -->
 # Email-retention Workflow - Metadata Schema
 
 This document outlines the metadata structure for managing Email-retention records.
@@ -7,4 +8,3 @@ This document outlines the metadata structure for managing Email-retention recor
 |-------------------------|-------------------|----------------|
 | Email Type | Choice | Category of retained email |
 | Retention Duration | Choice | How long the email must be retained |
-
