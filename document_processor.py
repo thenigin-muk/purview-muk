@@ -430,22 +430,20 @@ def generate_navigation(file_path, config):
     title_match = re.search(r'^# (.*)', content, re.MULTILINE)
     title = title_match.group(1) if title_match else file_path.stem.replace('-', ' ').title()
     
-    # Calculate relative paths consistently
-    home_path = get_relative_path("README.md", file_path)
+    # Create top navigation with breadcrumbs
+    top_nav = f"### Site Navigation\n"
+    top_nav += generate_breadcrumb_navigation(file_path)
+    
+    # Add common links
     workflows_path = get_relative_path("users/users.md", file_path)
     admin_path = get_relative_path("it-admins/README.md", file_path)
+    top_nav += f" | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})"
     
-    # Create top navigation with standard format for all files
-    top_nav = f"### Site Navigation\n"
-    top_nav += f"[🏠 Home]({home_path}) | [📂 All Workflows]({workflows_path}) | [⚙ IT Admin Docs]({admin_path})"
-    
-    # Add folder-specific navigation link for deeper folders
-    rel_path = file_path.parent.relative_to(Path("docs")) if Path("docs") in file_path.parent.parents else None
-    if rel_path and len(rel_path.parts) > 0:
-        parent_folder = rel_path.parts[-1]
-        back_path = "../README.md"
-        if parent_folder != "users" and parent_folder != "it-admins":
-            top_nav += f" | [⬅ Back to {parent_folder.replace('-', ' ').title()}]({back_path})"
+    # Add back link to parent folder for non-README files
+    if file_path.name.lower() != "readme.md":
+        back_path = "README.md"
+        parent_folder = file_path.parent.name.replace('-', ' ').title()
+        top_nav += f" | [⬅ Back to {parent_folder}]({back_path})"
     
     # Completely remove any existing site navigation section
     content = re.sub(r'### Site Navigation\n.*?\n\n', '', content, flags=re.DOTALL)
@@ -615,6 +613,40 @@ def ensure_readme_has_table(readme_path):
         # Write updated content
         readme_path.write_text(new_content)
         print(f"✅ Added navigation table to: {readme_path}")
+
+def generate_breadcrumb_navigation(file_path):
+    """Generate a breadcrumb navigation for a file showing the full path hierarchy"""
+    file_path = Path(file_path)
+    docs_dir = Path("docs")
+    
+    # Get the relative path from docs directory
+    try:
+        rel_path = file_path.parent.relative_to(docs_dir)
+        path_parts = rel_path.parts
+    except ValueError:
+        # File is not in docs directory
+        return f"[🏠 Home](README.md)"
+    
+    # Calculate home path - go up to docs root
+    home_path = "../" * len(path_parts) + "README.md"
+    
+    # Start with home link
+    breadcrumbs = [f"[🏠 Home]({home_path})"]
+    
+    # Build the path incrementally
+    current_path = ""
+    for i, part in enumerate(path_parts):
+        current_path += part + "/"
+        display_name = part.replace('-', ' ').title()
+        
+        # Calculate relative link - go up to remaining depth then to target
+        link_path = "../" * (len(path_parts) - i - 1) + "README.md"
+        
+        # Add to breadcrumbs
+        breadcrumbs.append(f"[{display_name}]({link_path})")
+    
+    # Connect all parts with separator
+    return " > ".join(breadcrumbs)
 
 def main():
     parser = argparse.ArgumentParser(description="Documentation processor for municipality records management")

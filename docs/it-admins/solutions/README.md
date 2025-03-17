@@ -3,7 +3,7 @@
 # Solutions
 
 ### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to Solutions](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Solutions](README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md)
 
 ## Description
 Documentation about solutions

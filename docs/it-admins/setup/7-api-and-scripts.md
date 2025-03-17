@@ -3,7 +3,7 @@
 # API Integration & Script Execution
 
 ### Site Navigation
-[🏠 Home](../../README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to Setup](../README.md)
+[🏠 Home](../../README.md) > [It Admins](../README.md) > [Setup](README.md) | [📂 All Workflows](../../users/users.md) | [⚙ IT Admin Docs](../../it-admins/README.md) | [⬅ Back to Setup](README.md)
 
 ## Overview of API Usage
 Microsoft Graph API and REST APIs enable advanced automation and data retrieval from SharePoint and Purview.

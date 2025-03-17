@@ -12,7 +12,7 @@ Technical documentation for IT administrators.
 
 | **#** | **Topic** | **Description** |
 |---|---|---|
-| 1 | [Core Concepts](core-concepts/) | Documentation for Core Concepts |
+| 1 | [Core Concepts](core-concepts/) | Documentation about IT Admin Setup Guide for Your Organization. |
 | 2 | [Setup](setup/) | Documentation about setup |
 | 3 | [Solutions](solutions/) | Documentation about solutions |
 | 4 | [Workflows](workflows/) | Documentation about workflows |
