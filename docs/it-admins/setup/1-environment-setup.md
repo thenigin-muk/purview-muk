@@ -15,9 +15,25 @@
 2. Install Git: [Git Download](https://git-scm.com/downloads)
 3. Install VS Code: [VS Code Download](https://code.visualstudio.com/)
 4. Configure SSH keys for GitHub:
-```bash
-eval $(ssh-agent -s)
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+  Follow the prompts to save the key to the default location (`~/.ssh/id_rsa`) and set a passphrase if desired.
+
+  **Add the SSH key to the agent**:
+  Once the SSH key is generated, you can add it to the SSH agent using the following command:
+  
+```sh
 ssh-add ~/.ssh/id_rsa
+```
+
+  **Start the SSH agent**:
+  If the SSH agent is not running, you can start it with the following command:
+  
+```sh
+eval "$(ssh-agent -s)"
 ```
 
 ## Next Steps
