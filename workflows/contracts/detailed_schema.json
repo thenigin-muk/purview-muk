@@ -1,0 +1,1239 @@
+{
+  "workflow": "contracts",
+  "metadata": [
+    {
+      "name": "Compliance Asset Id",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Compliance Asset Id",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "3a6b296c-3f50-445c-a13f-9c679ea9dda3",
+        "indexed": false,
+        "name": "ComplianceAssetId",
+        "readOnly": true,
+        "required": false,
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "internal_name": "ComplianceAssetId",
+      "is_site_column": false,
+      "id": "3a6b296c-3f50-445c-a13f-9c679ea9dda3",
+      "source": "List Column",
+      "readOnly": true,
+      "maxLength": 255
+    },
+    {
+      "name": "Title",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Title",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "indexed": false,
+        "name": "Title",
+        "readOnly": false,
+        "required": false,
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "internal_name": "Title",
+      "is_site_column": false,
+      "id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+      "source": "List Column",
+      "maxLength": 255
+    },
+    {
+      "name": "Description",
+      "type": "Text",
+      "description": "A description of the Document Set",
+      "raw_column_data": {
+        "columnGroup": "_Hidden",
+        "description": "A description of the Document Set",
+        "displayName": "Description",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "cbb92da4-fd46-4c7d-af6c-3128c2a5576e",
+        "indexed": false,
+        "name": "DocumentSetDescription",
+        "readOnly": false,
+        "required": false,
+        "text": {
+          "allowMultipleLines": true,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 5,
+          "textType": "plain"
+        }
+      },
+      "internal_name": "DocumentSetDescription",
+      "is_site_column": false,
+      "id": "cbb92da4-fd46-4c7d-af6c-3128c2a5576e",
+      "source": "List Column",
+      "allowMultipleLines": true,
+      "linesForEditing": 5
+    },
+    {
+      "name": "Contract Number",
+      "type": "Number",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Contract Number",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "7def9427-d2fc-475e-b8b4-571acadf997e",
+        "indexed": false,
+        "name": "Contract_x0020_Number",
+        "readOnly": false,
+        "required": false,
+        "number": {
+          "decimalPlaces": "automatic",
+          "displayAs": "number",
+          "maximum": 1.7976931348623157e+308,
+          "minimum": -1.7976931348623157e+308
+        }
+      },
+      "internal_name": "Contract_x0020_Number",
+      "is_site_column": true,
+      "id": "7def9427-d2fc-475e-b8b4-571acadf997e",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Contract Number",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "7def9427-d2fc-475e-b8b4-571acadf997e",
+        "indexed": false,
+        "name": "Contract_x0020_Number",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      }
+    },
+    {
+      "name": "Vendor/Party Name",
+      "type": "Text",
+      "description": "Name of contracted vendor",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Name of contracted vendor",
+        "displayName": "Vendor/Party Name",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ed5083dc-a460-4e93-adaf-b498b64f3aec",
+        "indexed": false,
+        "name": "Vendor_x002F_Party_x0020_Name",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "internal_name": "Vendor_x002F_Party_x0020_Name",
+      "is_site_column": true,
+      "id": "ed5083dc-a460-4e93-adaf-b498b64f3aec",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Name of contracted vendor",
+        "displayName": "Vendor/Party Name",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ed5083dc-a460-4e93-adaf-b498b64f3aec",
+        "indexed": false,
+        "name": "Vendor_x002F_Party_x0020_Name",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "maxLength": 255
+    },
+    {
+      "name": "Department",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Core Contact and Calendar Columns",
+        "description": "",
+        "displayName": "Department",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "c814b2cf-84c6-4f56-b4a4-c766938a97c5",
+        "indexed": false,
+        "name": "ol_Department",
+        "readOnly": false,
+        "required": false,
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "internal_name": "ol_Department",
+      "is_site_column": false,
+      "id": "c814b2cf-84c6-4f56-b4a4-c766938a97c5",
+      "source": "List Column",
+      "maxLength": 255
+    },
+    {
+      "name": "Effective Date",
+      "type": "Date",
+      "description": "Start date of Contract",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Start date of Contract",
+        "displayName": "Effective Date",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "5df8d394-12c5-473e-a69e-59cc2b28c41a",
+        "indexed": false,
+        "name": "Effective_x0020_Date",
+        "readOnly": false,
+        "required": false,
+        "dateTime": {
+          "displayAs": "standard",
+          "format": "dateOnly"
+        },
+        "defaultValue": {
+          "value": "[today]"
+        }
+      },
+      "internal_name": "Effective_x0020_Date",
+      "is_site_column": true,
+      "id": "5df8d394-12c5-473e-a69e-59cc2b28c41a",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Start date of Contract",
+        "displayName": "Effective Date",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "5df8d394-12c5-473e-a69e-59cc2b28c41a",
+        "indexed": false,
+        "name": "Effective_x0020_Date",
+        "readOnly": false,
+        "required": false,
+        "dateTime": {
+          "displayAs": "standard",
+          "format": "dateOnly"
+        },
+        "defaultValue": {
+          "value": "[today]"
+        }
+      },
+      "dateFormat": "dateOnly",
+      "dateDisplayAs": "standard"
+    },
+    {
+      "name": "Expiration Date",
+      "type": "Date",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Expiration Date",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ac713140-e591-4ede-b0e9-ac72bb8ca89d",
+        "indexed": false,
+        "name": "Expiration_x0020_Date",
+        "readOnly": false,
+        "required": false,
+        "dateTime": {
+          "displayAs": "standard",
+          "format": "dateOnly"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Expiration_x0020_Date",
+      "is_site_column": true,
+      "id": "ac713140-e591-4ede-b0e9-ac72bb8ca89d",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Expiration Date",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ac713140-e591-4ede-b0e9-ac72bb8ca89d",
+        "indexed": false,
+        "name": "Expiration_x0020_Date",
+        "readOnly": false,
+        "required": false,
+        "dateTime": {
+          "displayAs": "standard",
+          "format": "dateOnly"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "dateFormat": "dateOnly",
+      "dateDisplayAs": "standard"
+    },
+    {
+      "name": "Contract Status",
+      "type": "Choice",
+      "description": "Active, Pending, Expired, Closed, Renewed ",
+      "options": [
+        "Executed",
+        "Pending",
+        "Choice 3",
+        "Closed"
+      ],
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Active, Pending, Expired, Closed, Renewed ",
+        "displayName": "Contract Status",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "16c76e42-f5cb-4532-8c89-19d92f1e1b22",
+        "indexed": false,
+        "name": "Contract_x0020_Status",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Executed",
+            "Pending",
+            "Choice 3",
+            "Closed"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Contract_x0020_Status",
+      "is_site_column": true,
+      "id": "16c76e42-f5cb-4532-8c89-19d92f1e1b22",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Active, Pending, Expired, Closed, Renewed ",
+        "displayName": "Contract Status",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "16c76e42-f5cb-4532-8c89-19d92f1e1b22",
+        "indexed": false,
+        "name": "Contract_x0020_Status",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Executed",
+            "Pending",
+            "Choice 3",
+            "Closed"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Finance GL Code",
+      "type": "Text",
+      "description": "Budget tracking code",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Budget tracking code",
+        "displayName": "Finance GL Code",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "e3e5d1bc-1e47-4ff8-8598-026b13246493",
+        "indexed": false,
+        "name": "Finance_x0020_GL_x0020_Code",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "internal_name": "Finance_x0020_GL_x0020_Code",
+      "is_site_column": true,
+      "id": "e3e5d1bc-1e47-4ff8-8598-026b13246493",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Budget tracking code",
+        "displayName": "Finance GL Code",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "e3e5d1bc-1e47-4ff8-8598-026b13246493",
+        "indexed": false,
+        "name": "Finance_x0020_GL_x0020_Code",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": false,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 0,
+          "maxLength": 255
+        }
+      },
+      "maxLength": 255
+    },
+    {
+      "name": "Budgeted total for contract",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Budgeted total for contract",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ffc5a59d-3a84-4e3d-8254-41a851c8d969",
+        "indexed": false,
+        "name": "Budgeted_x0020_total_x0020_for_x0020_contract",
+        "readOnly": false,
+        "required": false,
+        "currency": {
+          "locale": "en-US"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Budgeted_x0020_total_x0020_for_x0020_contract",
+      "is_site_column": true,
+      "id": "ffc5a59d-3a84-4e3d-8254-41a851c8d969",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Budgeted total for contract",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ffc5a59d-3a84-4e3d-8254-41a851c8d969",
+        "indexed": false,
+        "name": "Budgeted_x0020_total_x0020_for_x0020_contract",
+        "readOnly": false,
+        "required": false,
+        "currency": {
+          "locale": "en-US"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Linked Agenda Bill",
+      "type": "Lookup",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Linked Agenda Bill",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "12532fd1-362d-469b-a122-43319cefb582",
+        "indexed": false,
+        "name": "Linked_x0020_Agenda_x0020_Bill",
+        "readOnly": false,
+        "required": false,
+        "lookup": {
+          "allowMultipleValues": false,
+          "allowUnlimitedLength": false,
+          "columnName": "_ColorTag",
+          "listId": "845afa31-80f6-4477-b038-1447564bd8ef"
+        }
+      },
+      "internal_name": "Linked_x0020_Agenda_x0020_Bill",
+      "is_site_column": true,
+      "id": "12532fd1-362d-469b-a122-43319cefb582",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Linked Agenda Bill",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "12532fd1-362d-469b-a122-43319cefb582",
+        "indexed": false,
+        "name": "Linked_x0020_Agenda_x0020_Bill",
+        "readOnly": false,
+        "required": false,
+        "lookup": {
+          "allowMultipleValues": false,
+          "allowUnlimitedLength": false,
+          "columnName": "_ColorTag",
+          "listId": "845afa31-80f6-4477-b038-1447564bd8ef"
+        }
+      },
+      "lookup": {
+        "allowMultipleValues": false,
+        "allowUnlimitedLength": false,
+        "columnName": "_ColorTag",
+        "listId": "845afa31-80f6-4477-b038-1447564bd8ef"
+      }
+    },
+    {
+      "name": "Document Type",
+      "type": "Choice",
+      "description": "Contract, Amendment, Exhibit, Supporting Document, Correspondence, Form",
+      "options": [
+        "Contract",
+        "Amendment",
+        "Exhibit",
+        "Supporting Document",
+        "Correspondence"
+      ],
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Contract, Amendment, Exhibit, Supporting Document, Correspondence, Form",
+        "displayName": "Document Type",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ff919f04-4ba4-4e45-9bbe-01ce6798242c",
+        "indexed": false,
+        "name": "Document_x0020_Type",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Contract",
+            "Amendment",
+            "Exhibit",
+            "Supporting Document",
+            "Correspondence"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Document_x0020_Type",
+      "is_site_column": true,
+      "id": "ff919f04-4ba4-4e45-9bbe-01ce6798242c",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Contract, Amendment, Exhibit, Supporting Document, Correspondence, Form",
+        "displayName": "Document Type",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "ff919f04-4ba4-4e45-9bbe-01ce6798242c",
+        "indexed": false,
+        "name": "Document_x0020_Type",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Contract",
+            "Amendment",
+            "Exhibit",
+            "Supporting Document",
+            "Correspondence"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Document Status",
+      "type": "Choice",
+      "description": "Draft, Routed, Approved, Signed, Final, Archived ",
+      "options": [
+        "Draft",
+        "Routed",
+        "Approved",
+        "Signed",
+        "Final"
+      ],
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Draft, Routed, Approved, Signed, Final, Archived ",
+        "displayName": "Document Status",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "91a80f8a-2e43-4b59-a187-94627ab8312c",
+        "indexed": false,
+        "name": "Document_x0020_Status",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Draft",
+            "Routed",
+            "Approved",
+            "Signed",
+            "Final"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Document_x0020_Status",
+      "is_site_column": true,
+      "id": "91a80f8a-2e43-4b59-a187-94627ab8312c",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Draft, Routed, Approved, Signed, Final, Archived ",
+        "displayName": "Document Status",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "91a80f8a-2e43-4b59-a187-94627ab8312c",
+        "indexed": false,
+        "name": "Document_x0020_Status",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Draft",
+            "Routed",
+            "Approved",
+            "Signed",
+            "Final"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Date Routed",
+      "type": "Date",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Date Routed",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "840152f8-9cb3-4fa9-9029-3befc923bda7",
+        "indexed": false,
+        "name": "Date_x0020_Routed",
+        "readOnly": false,
+        "required": false,
+        "dateTime": {
+          "displayAs": "standard",
+          "format": "dateOnly"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Date_x0020_Routed",
+      "is_site_column": true,
+      "id": "840152f8-9cb3-4fa9-9029-3befc923bda7",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Date Routed",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "840152f8-9cb3-4fa9-9029-3befc923bda7",
+        "indexed": false,
+        "name": "Date_x0020_Routed",
+        "readOnly": false,
+        "required": false,
+        "dateTime": {
+          "displayAs": "standard",
+          "format": "dateOnly"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "dateFormat": "dateOnly",
+      "dateDisplayAs": "standard"
+    },
+    {
+      "name": "Approval Status",
+      "type": "Choice",
+      "description": "",
+      "options": [
+        "Pending",
+        "Routed",
+        "Approved",
+        "Returned",
+        "Signed"
+      ],
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Approval Status",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "22403ea9-a83e-4f82-98e7-d1bcf2c22656",
+        "indexed": false,
+        "name": "Approval_x0020_Status",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Pending",
+            "Routed",
+            "Approved",
+            "Returned",
+            "Signed"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Approval_x0020_Status",
+      "is_site_column": true,
+      "id": "22403ea9-a83e-4f82-98e7-d1bcf2c22656",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Approval Status",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "22403ea9-a83e-4f82-98e7-d1bcf2c22656",
+        "indexed": false,
+        "name": "Approval_x0020_Status",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Pending",
+            "Routed",
+            "Approved",
+            "Returned",
+            "Signed"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Reviewer/Approver",
+      "type": "Person",
+      "description": "Reviewing or approving staff ",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Reviewing or approving staff ",
+        "displayName": "Reviewer/Approver",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "401f4058-2bf8-4ea2-bd1f-85b0ed92adea",
+        "indexed": false,
+        "name": "Reviewer_x002F_Approver",
+        "readOnly": false,
+        "required": false,
+        "personOrGroup": {
+          "allowMultipleSelection": false,
+          "displayAs": "nameWithPresence",
+          "chooseFromType": "peopleOnly"
+        }
+      },
+      "internal_name": "Reviewer_x002F_Approver",
+      "is_site_column": true,
+      "id": "401f4058-2bf8-4ea2-bd1f-85b0ed92adea",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Reviewing or approving staff ",
+        "displayName": "Reviewer/Approver",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "401f4058-2bf8-4ea2-bd1f-85b0ed92adea",
+        "indexed": false,
+        "name": "Reviewer_x002F_Approver",
+        "readOnly": false,
+        "required": false,
+        "personOrGroup": {
+          "allowMultipleSelection": false,
+          "displayAs": "nameWithPresence",
+          "chooseFromType": "peopleOnly"
+        }
+      }
+    },
+    {
+      "name": "Signature Method",
+      "type": "Choice",
+      "description": "",
+      "options": [
+        "Electronic",
+        "Wet Signature"
+      ],
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Signature Method",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "69e9f8a2-9a0f-4924-b455-b66eb1707bc3",
+        "indexed": false,
+        "name": "Signature_x0020_Method",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Electronic",
+            "Wet Signature"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Signature_x0020_Method",
+      "is_site_column": true,
+      "id": "69e9f8a2-9a0f-4924-b455-b66eb1707bc3",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Signature Method",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "69e9f8a2-9a0f-4924-b455-b66eb1707bc3",
+        "indexed": false,
+        "name": "Signature_x0020_Method",
+        "readOnly": false,
+        "required": false,
+        "choice": {
+          "allowTextEntry": false,
+          "choices": [
+            "Electronic",
+            "Wet Signature"
+          ],
+          "displayAs": "dropDownMenu"
+        },
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Returned to City Clerk ",
+      "type": "Text",
+      "description": "Executed copies returned",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Executed copies returned",
+        "displayName": "Returned to City Clerk ",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "c186ead1-58fb-4cf8-bd1f-f6637d273c1b",
+        "indexed": false,
+        "name": "Returned_x0020_to_x0020_City_x0020_Clerk_x0020_",
+        "readOnly": false,
+        "required": false,
+        "boolean": {},
+        "defaultValue": {
+          "value": "0"
+        }
+      },
+      "internal_name": "Returned_x0020_to_x0020_City_x0020_Clerk_x0020_",
+      "is_site_column": true,
+      "id": "c186ead1-58fb-4cf8-bd1f-f6637d273c1b",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Executed copies returned",
+        "displayName": "Returned to City Clerk ",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "c186ead1-58fb-4cf8-bd1f-f6637d273c1b",
+        "indexed": false,
+        "name": "Returned_x0020_to_x0020_City_x0020_Clerk_x0020_",
+        "readOnly": false,
+        "required": false,
+        "boolean": {},
+        "defaultValue": {
+          "value": "0"
+        }
+      }
+    },
+    {
+      "name": "Notes/Remarks ",
+      "type": "Text",
+      "description": "Additional context",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Additional context",
+        "displayName": "Notes/Remarks ",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "b86b54e6-7016-436d-a1eb-5e7cd74b2a88",
+        "indexed": false,
+        "name": "Notes_x002F_Remarks_x0020_",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": true,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 6,
+          "textType": "plain"
+        }
+      },
+      "internal_name": "Notes_x002F_Remarks_x0020_",
+      "is_site_column": true,
+      "id": "b86b54e6-7016-436d-a1eb-5e7cd74b2a88",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "Additional context",
+        "displayName": "Notes/Remarks ",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "b86b54e6-7016-436d-a1eb-5e7cd74b2a88",
+        "indexed": false,
+        "name": "Notes_x002F_Remarks_x0020_",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        },
+        "text": {
+          "allowMultipleLines": true,
+          "appendChangesToExistingText": false,
+          "linesForEditing": 6,
+          "textType": "plain"
+        }
+      },
+      "allowMultipleLines": true,
+      "linesForEditing": 6
+    },
+    {
+      "name": "Department & Division",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Base Columns",
+        "description": "",
+        "displayName": "Department & Division",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "2d83e6c7-3e03-456b-9afa-c8203e0cb8b1",
+        "indexed": false,
+        "name": "Department_x0020__x0026__x0020_DIvision",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Department_x0020__x0026__x0020_DIvision",
+      "is_site_column": false,
+      "id": "2d83e6c7-3e03-456b-9afa-c8203e0cb8b1",
+      "source": "List Column"
+    },
+    {
+      "name": "Primary Contract Type",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Primary Contract Type",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "e1187881-3e01-49c9-aacf-142c0b93ed98",
+        "indexed": false,
+        "name": "Primary_x0020_Contract_x0020_Type",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        }
+      },
+      "internal_name": "Primary_x0020_Contract_x0020_Type",
+      "is_site_column": true,
+      "id": "e1187881-3e01-49c9-aacf-142c0b93ed98",
+      "source": "Site Column",
+      "site_column_data": {
+        "columnGroup": "Contracts Column",
+        "description": "",
+        "displayName": "Primary Contract Type",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "e1187881-3e01-49c9-aacf-142c0b93ed98",
+        "indexed": false,
+        "name": "Primary_x0020_Contract_x0020_Type",
+        "readOnly": false,
+        "required": false,
+        "defaultValue": {
+          "value": ""
+        }
+      }
+    },
+    {
+      "name": "Checked Out To",
+      "type": "Person",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Checked Out To",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b",
+        "indexed": false,
+        "name": "CheckoutUser",
+        "readOnly": true,
+        "required": false,
+        "personOrGroup": {
+          "allowMultipleSelection": false,
+          "displayAs": "nameWithPresence",
+          "chooseFromType": "peopleAndGroups"
+        }
+      },
+      "internal_name": "CheckoutUser",
+      "is_site_column": false,
+      "id": "3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b",
+      "source": "List Column",
+      "readOnly": true
+    },
+    {
+      "name": "Name",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Name",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "9d30f126-ba48-446b-b8f9-83745f322ebe",
+        "indexed": false,
+        "name": "LinkFilenameNoMenu",
+        "readOnly": true,
+        "required": false
+      },
+      "internal_name": "LinkFilenameNoMenu",
+      "is_site_column": false,
+      "id": "9d30f126-ba48-446b-b8f9-83745f322ebe",
+      "source": "List Column",
+      "readOnly": true
+    },
+    {
+      "name": "Name",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Name",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "5cc6dc79-3710-4374-b433-61cb4a686c12",
+        "indexed": false,
+        "name": "LinkFilename",
+        "readOnly": true,
+        "required": false
+      },
+      "internal_name": "LinkFilename",
+      "is_site_column": false,
+      "id": "5cc6dc79-3710-4374-b433-61cb4a686c12",
+      "source": "List Column",
+      "readOnly": true
+    },
+    {
+      "name": "File Size",
+      "type": "Text",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "File Size",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "78a07ba4-bda8-4357-9e0f-580d64487583",
+        "indexed": false,
+        "name": "FileSizeDisplay",
+        "readOnly": true,
+        "required": false
+      },
+      "internal_name": "FileSizeDisplay",
+      "is_site_column": false,
+      "id": "78a07ba4-bda8-4357-9e0f-580d64487583",
+      "source": "List Column",
+      "readOnly": true
+    },
+    {
+      "name": "App Created By",
+      "type": "Lookup",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "App Created By",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "6bfaba20-36bf-44b5-a1b2-eb6346d49716",
+        "indexed": false,
+        "name": "AppAuthor",
+        "readOnly": true,
+        "required": false,
+        "lookup": {
+          "allowMultipleValues": false,
+          "allowUnlimitedLength": false,
+          "columnName": "Title",
+          "listId": "AppPrincipals"
+        }
+      },
+      "internal_name": "AppAuthor",
+      "is_site_column": false,
+      "id": "6bfaba20-36bf-44b5-a1b2-eb6346d49716",
+      "source": "List Column",
+      "readOnly": true,
+      "lookup": {
+        "allowMultipleValues": false,
+        "allowUnlimitedLength": false,
+        "columnName": "Title",
+        "listId": "AppPrincipals"
+      }
+    },
+    {
+      "name": "App Modified By",
+      "type": "Lookup",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "App Modified By",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "e08400f3-c779-4ed2-a18c-ab7f34caa318",
+        "indexed": false,
+        "name": "AppEditor",
+        "readOnly": true,
+        "required": false,
+        "lookup": {
+          "allowMultipleValues": false,
+          "allowUnlimitedLength": false,
+          "columnName": "Title",
+          "listId": "AppPrincipals"
+        }
+      },
+      "internal_name": "AppEditor",
+      "is_site_column": false,
+      "id": "e08400f3-c779-4ed2-a18c-ab7f34caa318",
+      "source": "List Column",
+      "readOnly": true,
+      "lookup": {
+        "allowMultipleValues": false,
+        "allowUnlimitedLength": false,
+        "columnName": "Title",
+        "listId": "AppPrincipals"
+      }
+    },
+    {
+      "name": "Source Version (Converted Document)",
+      "type": "Lookup",
+      "description": "",
+      "raw_column_data": {
+        "columnGroup": "Custom Columns",
+        "description": "",
+        "displayName": "Source Version (Converted Document)",
+        "enforceUniqueValues": false,
+        "hidden": false,
+        "id": "bc1a8efb-0f4c-49f8-a38f-7fe22af3d3e0",
+        "indexed": false,
+        "name": "ParentVersionString",
+        "readOnly": true,
+        "required": false,
+        "lookup": {
+          "allowMultipleValues": false,
+          "allowUnlimitedLength": false,
+          "columnName": "ParentVersionString",
+          "listId": "",
+          "primaryLookupColumnId": "ID"
+        }
+      },
+      "internal_name": "ParentVersionString",
+      "is_site_column": false,
+      "id": "bc1a8efb-0f4c-49f8-a38f-7fe22af3d3e0",
+      "source": "List Column",
+      "readOnly": true,
+      "lookup": {
+        "allowMultipleValues": false,
+        "allowUnlimitedLength": false,
+        "columnName": "ParentVersionString",
+        "listId": "",
+        "primaryLookupColumnId": "ID"
+      }
+    }
+  ]
+}

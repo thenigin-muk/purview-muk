@@ -1,0 +1,231 @@
+<!-- description: Documentation for the SharePoint Metadata Extraction and Analysis Tool -->
+
+# SharePoint Metadata Tool
+
+## Overview
+
+The SharePoint Metadata Tool is a command-line utility that helps IT administrators and developers extract, analyze, and compare metadata schemas from SharePoint Online sites. It provides capabilities for documenting existing column configurations and identifying changes needed to implement standardized metadata schemas across your organization.
+
+## Key Features
+
+- **Extract metadata** from any SharePoint list or document library
+- **Save schemas** as structured JSON files
+- **Compare schemas** against target metadata templates
+- **Identify differences** between current and target configurations
+- **Detailed reports** of fields to add, update, or remove
+
+## Prerequisites
+
+- Python 3.6 or higher
+- Required Python packages:
+  - `requests`
+  - `msal` (Microsoft Authentication Library)
+  - `python-dotenv` (for local development)
+- SharePoint API permissions:
+  - Application permission: `Sites.Read.All` or higher
+
+## Installation
+
+1. The tool is part of the Purview Management Utility Kit located at:  
+   `/workflows/common/sp_metadata_tool.py`
+
+2. Set up environment variables for authentication:
+   ```
+   SHAREPOINT_CLIENT_ID=your_client_id_here
+   SHAREPOINT_CLIENT_SECRET=your_client_secret_here
+   TENANT_ID=your_tenant_id_here
+   ```
+
+3. For local development, create a `.env` file in the project root with the variables above.
+
+## Usage
+
+### Basic Usage
+
+Extract metadata schema from a SharePoint list or library:
+
+```bash
+python workflows/common/sp_metadata_tool.py --site "https://contoso.sharepoint.com/sites/YourSite" --list "Documents"
+```
+
+Extract and save to a specific location:
+
+```bash
+python workflows/common/sp_metadata_tool.py --site "https://contoso.sharepoint.com/sites/YourSite" --library "Contracts" --output "workflows/contracts/current_schema.json"
+```
+
+### Analysis Mode
+
+Compare current metadata with a target schema:
+
+```bash
+python workflows/common/sp_metadata_tool.py --site "https://contoso.sharepoint.com/sites/YourSite" --list "Documents" --analyze --schema "workflows/contracts/metadata-schema.json"
+```
+
+### Command Line Options
+
+| Option | Description |
+|--------|-------------|
+| `--site` | SharePoint site URL (required) |
+| `--list` | List or document library name (mutually exclusive with --library) |
+| `--library` | Document library name (alias for --list) |
+| `--output` | Path to save extracted schema (default: auto-generated filename) |
+| `--analyze` | Compare extracted schema with target schema |
+| `--schema` | Path to target schema for analysis (required with --analyze) |
+| `--verbose` | Show detailed progress information |
+
+## Schema Format
+
+The extracted schema follows this JSON structure:
+
+```json
+{
+  "workflow": "document_library_name",
+  "metadata": [
+    {
+      "name": "Field Display Name",
+      "type": "Text",
+      "description": "Field description"
+    },
+    {
+      "name": "Approval Status",
+      "type": "Choice",
+      "options": ["Pending", "Approved", "Rejected"],
+      "description": "Current status of approval"
+    }
+    // Additional fields...
+  ]
+}
+```
+
+## Supported Field Types
+
+The tool maps SharePoint column types to these standardized types in our schema format:
+
+### Core Field Types (Fully Supported)
+- `Text` - Single line of text
+- `Note` - Multi-line text/Rich text
+- `Choice` - Single-choice selection fields
+- `Date` - Date and time fields
+- `Number` - Numeric fields (including currency)
+- `Person` - Person or group fields
+- `Lookup` - Fields that reference other list items
+- `Hyperlink` - URL fields with optional descriptions
+- `Boolean` - Yes/No fields
+- `Managed Metadata` - Terms from the term store
+
+### Additional SharePoint Column Types (Mapping)
+
+SharePoint supports many more column types that are mapped to our standardized types:
+
+| SharePoint Column Type | Mapped To | Notes |
+|------------------------|-----------|-------|
+| Single line of text | `Text` | |
+| Multiple lines of text | `Note` | Including enhanced rich text |
+| Choice | `Choice` | Single selection |
+| Multi-Choice | `Choice` | Array format in our schema |
+| Number | `Number` | |
+| Currency | `Number` | With currency metadata |
+| Date and Time | `Date` | |
+| Lookup | `Lookup` | |
+| Yes/No (checkbox) | `Boolean` | |
+| Person or Group | `Person` | |
+| Hyperlink or Picture | `Hyperlink` | |
+| Calculated | Based on result type | |
+| Managed Metadata | `Managed Metadata` | |
+| External Data | `Lookup` | May have limited support |
+| Outcome Choice | `Choice` | |
+| Location | `Text` | |
+| Image | `Hyperlink` | |
+| Validation | Based on field type | Validation rules not preserved |
+
+### Custom and Advanced Types
+
+For complex scenarios with Purview integration and retention management, some specialized field types have special handling:
+
+- **Term Set Fields**: Preserved with termSetId metadata if available
+- **Content Type Fields**: Mapped with content type information
+- **Site Columns**: Base mapping by data type with site column reference
+- **Custom SPFx Fields**: Basic mapping to nearest standard type
+- **Retention Labels**: Special handling for Purview integration
+
+### Purview-Specific Field Types
+
+For your detailed Purview requirements, the tool can be extended to recognize and map:
+
+- **Retention Policy Fields**: Maps to appropriate metadata format
+- **Sensitivity Labels**: Preserved with label metadata
+- **Compliance Tags**: Maintained with compliance identifiers
+- **Record Declaration Fields**: Special handling for record status
+- **DLP Policy Fields**: Mapped with DLP relevance indicators
+
+If your projects require working with these specialized Purview-related field types, consider extending the `map_sp_type_to_schema` function in the utility module to handle the specific metadata properties these fields expose through the Graph API.
+
+## Implementation Details
+
+### Authentication
+
+The tool uses OAuth 2.0 client credentials flow to authenticate with Microsoft Graph API using an Azure AD application registration.
+
+### SharePoint API Integration
+
+SharePoint site and list metadata is accessed through Microsoft Graph API v1.0 endpoints:
+
+- `/sites/{site-id}`
+- `/sites/{site-id}/lists`
+- `/sites/{site-id}/lists/{list-id}/columns`
+
+### Analysis Process
+
+When comparing schemas, the tool:
+
+1. Extracts current metadata from the specified SharePoint list/library
+2. Loads the target schema from the specified JSON file
+3. Compares fields based on name, type, description, and options
+4. Generates a detailed report of differences
+5. Categorizes changes as fields to add, update, or remove
+
+## Workflow Integration
+
+This tool forms a key part of the metadata standardization workflow:
+
+1. **Extract** current metadata from existing SharePoint libraries
+2. **Define** target metadata schema for each document type
+3. **Compare** current and target schemas to identify gaps
+4. **Implement** changes through SharePoint configuration or automation
+5. **Validate** that applied changes match the target schema
+
+## Common Use Cases
+
+- **Site Migration**: Document existing column configurations before migration
+- **Compliance Implementation**: Compare current metadata against compliance requirements
+- **Standardization**: Identify metadata inconsistencies across libraries
+- **Documentation**: Generate up-to-date documentation of SharePoint configurations
+
+## Troubleshooting
+
+### Common Issues
+
+- **Authentication Errors**: Verify your client ID, client secret, and tenant ID
+- **"List not found"**: Confirm the exact list or library name (case-sensitive)
+- **Permission Errors**: Ensure your app registration has appropriate permissions
+
+### Logging
+
+Use the `--verbose` flag to display detailed logging information during execution.
+
+## Future Enhancements
+
+- Support for updating SharePoint columns directly from target schema
+- PowerShell integration for broader admin tooling compatibility
+- Web interface for less technical users
+- Report export in XLSX or HTML formats
+
+## Related Tools
+
+- **SharePoint PnP PowerShell** for broader site management
+- **Microsoft 365 CLI** for cross-platform administration
+- **SharePoint REST API** for direct API access
+
+---
+````

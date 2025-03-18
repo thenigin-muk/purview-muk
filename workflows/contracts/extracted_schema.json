@@ -1,0 +1,181 @@
+{
+  "workflow": "contracts",
+  "metadata": [
+    {
+      "name": "Compliance Asset Id",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Title",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Description",
+      "type": "Text",
+      "description": "A description of the Document Set"
+    },
+    {
+      "name": "Contract Number",
+      "type": "Number",
+      "description": ""
+    },
+    {
+      "name": "Vendor/Party Name",
+      "type": "Text",
+      "description": "Name of contracted vendor"
+    },
+    {
+      "name": "Department",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Effective Date",
+      "type": "Date",
+      "description": "Start date of Contract"
+    },
+    {
+      "name": "Expiration Date",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "name": "Contract Status",
+      "type": "Choice",
+      "description": "Active, Pending, Expired, Closed, Renewed ",
+      "options": [
+        "Executed",
+        "Pending",
+        "Choice 3",
+        "Closed"
+      ]
+    },
+    {
+      "name": "Finance GL Code",
+      "type": "Text",
+      "description": "Budget tracking code"
+    },
+    {
+      "name": "Budgeted total for contract",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Linked Agenda Bill",
+      "type": "Lookup",
+      "description": ""
+    },
+    {
+      "name": "Document Type",
+      "type": "Choice",
+      "description": "Contract, Amendment, Exhibit, Supporting Document, Correspondence, Form",
+      "options": [
+        "Contract",
+        "Amendment",
+        "Exhibit",
+        "Supporting Document",
+        "Correspondence"
+      ]
+    },
+    {
+      "name": "Document Status",
+      "type": "Choice",
+      "description": "Draft, Routed, Approved, Signed, Final, Archived ",
+      "options": [
+        "Draft",
+        "Routed",
+        "Approved",
+        "Signed",
+        "Final"
+      ]
+    },
+    {
+      "name": "Date Routed",
+      "type": "Date",
+      "description": ""
+    },
+    {
+      "name": "Approval Status",
+      "type": "Choice",
+      "description": "",
+      "options": [
+        "Pending",
+        "Routed",
+        "Approved",
+        "Returned",
+        "Signed"
+      ]
+    },
+    {
+      "name": "Reviewer/Approver",
+      "type": "Person",
+      "description": "Reviewing or approving staff "
+    },
+    {
+      "name": "Signature Method",
+      "type": "Choice",
+      "description": "",
+      "options": [
+        "Electronic",
+        "Wet Signature"
+      ]
+    },
+    {
+      "name": "Returned to City Clerk ",
+      "type": "Text",
+      "description": "Executed copies returned"
+    },
+    {
+      "name": "Notes/Remarks ",
+      "type": "Text",
+      "description": "Additional context"
+    },
+    {
+      "name": "Department & Division",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Primary Contract Type",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Checked Out To",
+      "type": "Person",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "File Size",
+      "type": "Text",
+      "description": ""
+    },
+    {
+      "name": "App Created By",
+      "type": "Lookup",
+      "description": ""
+    },
+    {
+      "name": "App Modified By",
+      "type": "Lookup",
+      "description": ""
+    },
+    {
+      "name": "Source Version (Converted Document)",
+      "type": "Lookup",
+      "description": ""
+    }
+  ]
+}
