@@ -24,4 +24,4 @@
 
 ---
 
-[⬅ Previous: 1 Environment Setup](1-environment-setup.md) | [Next: 2 Git Version Control ➡](2-git-version-control.md)
+[⬅ Previous: 1 Environment Setup](1-environment-setup.md) | [Next: 11 Logging Guide ➡](11-logging-guide.md)

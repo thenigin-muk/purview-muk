@@ -9,4 +9,4 @@
 
 ---
 
-[⬅ Previous: 10 Troubleshooting](10-troubleshooting.md) | [Next: 3 Repository Structure ➡](3-repository-structure.md)
+[⬅ Previous: 11 Logging Guide](11-logging-guide.md) | [Next: 3 Repository Structure ➡](3-repository-structure.md)

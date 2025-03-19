@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# file: workflows/common/sp_metadata_tool.py
 """
 SharePoint Metadata Tool - Extract, analyze and compare SharePoint metadata schemas.
 

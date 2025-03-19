@@ -1,3 +1,6 @@
+#!/usr/bin/env python3 
+# file: workflows/siteapp/scripts/push-to-sharepoint.py
+
 """
 Future implementation for SharePoint integration.
 This is a placeholder skeleton and not currently functional.

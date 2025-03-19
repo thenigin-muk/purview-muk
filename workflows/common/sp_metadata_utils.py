@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# file: workflows/common/sp_metadata_utils.py
 import requests
 import os
 import json
@@ -67,7 +69,7 @@ def get_site_id(token, site_url, verbose=False):
     site_path = parsed_url.path
     
     if verbose:
-        logging.info(f"Parsed URL: hostname={hostname}, path={site_path}")
+        log_utils.info("Parsed URL: hostname={}, path={}", hostname, site_path)
     api_url = None
     
     # Case 1: Root site
@@ -97,17 +99,20 @@ def get_site_id(token, site_url, verbose=False):
         api_url = f"https://graph.microsoft.com/v1.0/sites/{hostname}:{site_path}"
     
     if verbose:
-        import logging
-        logging.info(f"Using API URL: {api_url}")
+        log_utils.info("Using API URL: {}", api_url)
+    
+    # Make the API request to get site information
+    response = requests.get(api_url, headers=headers)
     
     if response.status_code == 200:
         site_data = response.json()
         if verbose:
-            import logging
-            logging.info(f"Success! Site name: {site_data.get('displayName')}")
-        import logging
-        logging.error(f"Error retrieving site: Status {response.status_code}")
-        logging.error(response.text)
+            log_utils.info("Success! Site name: {}", site_data.get('displayName'))
+        return site_data.get('id')
+    else:
+        log_utils.error("Error retrieving site: Status {} - {}", response.status_code, response.text)
+        return None
+
 def get_lists(token, site_id):
     """Get all lists in the SharePoint site."""
     headers = {
@@ -123,9 +128,8 @@ def get_lists(token, site_id):
         lists_data = response.json()
         return lists_data.get('value', [])
     else:
-        import logging
-        logging.error(f"Error retrieving lists: Status {response.status_code}")
-        logging.error(response.text)
+        from workflows.common import log_utils
+        log_utils.error("Error retrieving lists: Status {} - {}", response.status_code, response.text)
 
 def get_list_columns(token, site_id, list_id):
     """Get all columns (fields) for a specific list."""
@@ -142,9 +146,8 @@ def get_list_columns(token, site_id, list_id):
         columns_data = response.json()
         return columns_data.get('value', [])
     else:
-        import logging
-        logging.error(f"Error retrieving columns: Status {response.status_code}")
-        logging.error(response.text)
+        from workflows.common import log_utils
+        log_utils.error("Error retrieving columns: Status {} - {}", response.status_code, response.text)
 
 def map_sp_type_to_schema(column):
     """Map SharePoint column type to our schema format."""
@@ -191,9 +194,8 @@ def get_site_columns(token, site_id):
         columns_data = response.json()
         return columns_data.get('value', [])
     else:
-        import logging
-        logging.error(f"Error retrieving site columns: Status {response.status_code}")
-        logging.error(response.text)
+        from workflows.common import log_utils
+        log_utils.error("Error retrieving site columns: Status {} - {}", response.status_code, response.text)
 
 def extract_metadata_schema(site_url, list_name=None, verbose=False, detailed=False):
     """
@@ -209,31 +211,31 @@ def extract_metadata_schema(site_url, list_name=None, verbose=False, detailed=Fa
         Dict containing extracted schema or None if failed
     """
     if verbose:
-        logging.info(f"Extracting metadata schema from {site_url}")
+        log_utils.info("Extracting metadata schema from {}", site_url)
     
     token = get_access_token()
     if not token:
-        logging.error("Failed to get access token")
+        log_utils.error("Failed to get access token")
         return None
     
     site_id = get_site_id(token, site_url, verbose)
     if not site_id:
-        logging.error(f"Failed to get site ID for {site_url}")
+        log_utils.error("Failed to get site ID for {}", site_url)
         return None
     
     # Get site columns if detailed info is requested
     site_columns_dict = {}
     if detailed:
         if verbose:
-            logging.info("Getting site columns...")
+            log_utils.info("Getting site columns...")
         site_columns = get_site_columns(token, site_id)
         site_columns_dict = {col.get('name'): col for col in site_columns}
         if verbose:
-            logging.info(f"Found {len(site_columns)} site columns")
+            log_utils.info("Found {} site columns", len(site_columns))
     
     lists = get_lists(token, site_id)
     if not lists:
-        logging.error("No lists found in the site")
+        log_utils.error("No lists found in the site")
         return None
     
     # Process all lists or just the specified one
@@ -241,9 +243,9 @@ def extract_metadata_schema(site_url, list_name=None, verbose=False, detailed=Fa
     
     if list_name and not target_lists:
         if verbose:
-            logging.error(f"List '{list_name}' not found. Available lists:")
+            log_utils.error("List '{}' not found. Available lists:", list_name)
             for l in lists:
-                logging.error(f"  - {l.get('displayName')}")
+                log_utils.error("  - {}", l.get('displayName'))
         return None
     
     all_schemas = []
@@ -253,7 +255,7 @@ def extract_metadata_schema(site_url, list_name=None, verbose=False, detailed=Fa
         list_display_name = lst.get('displayName')
         
         if verbose:
-            logging.info(f"Processing list: {list_display_name}")
+            log_utils.info("Processing list: {}", list_display_name)
         
         # Get list columns
         columns = get_list_columns(token, site_id, list_id)
@@ -422,8 +424,7 @@ def list_document_libraries(token, site_id):
                 libraries.append(list_item)
         return libraries
     else:
-        logging.error(f"Error retrieving lists: Status {response.status_code}")
-        logging.error(response.text)
+        log_utils.error("Error retrieving lists: Status {} - {}", response.status_code, response.text)
         return []
 
 def get_content_types(token, site_id):
@@ -441,9 +442,8 @@ def get_content_types(token, site_id):
         data = response.json()
         return data.get('value', [])
     else:
-        import logging
-        logging.error(f"Error retrieving content types: Status {response.status_code}")
-        logging.error(response.text)
+        from workflows.common import log_utils
+        log_utils.error("Error retrieving content types: Status {} - {}", response.status_code, response.text)
 
 def get_site_features(token, site_id):
     """Get site features information."""
@@ -480,9 +480,8 @@ def get_site_features(token, site_id):
             })
         return features
     else:
-        import logging
-        logging.error(f"Error retrieving site features: Status {response.status_code}")
-        logging.error(response.text)
+        from workflows.common import log_utils
+        log_utils.error("Error retrieving site features: Status {} - {}", response.status_code, response.text)
 
 def get_list_settings(token, site_id, list_id):
     """Get detailed list settings."""
@@ -508,9 +507,8 @@ def get_list_settings(token, site_id, list_id):
         
         return list_data
     else:
-        import logging
-        logging.error(f"Error retrieving list settings: Status {response.status_code}")
-        logging.error(response.text)
+        from workflows.common import log_utils
+        log_utils.error("Error retrieving list settings: Status {} - {}", response.status_code, response.text)
 
 def extract_comprehensive_site_schema(site_url, specific_list=None, verbose=False, detailed=False):
     """
@@ -526,16 +524,16 @@ def extract_comprehensive_site_schema(site_url, specific_list=None, verbose=Fals
         Dict containing comprehensive site schema or None if failed
     """
     if verbose:
-        logging.info(f"Extracting comprehensive information from {site_url}")
+        log_utils.info("Extracting comprehensive information from {}", site_url)
     
     token = get_access_token()
     if not token:
-        logging.error("Failed to get access token")
+        log_utils.error("Failed to get access token")
         return None
     
     site_id = get_site_id(token, site_url, verbose)
     if not site_id:
-        logging.error(f"Failed to get site ID for {site_url}")
+        log_utils.error("Failed to get site ID for {}", site_url)
         return None
     
     # Prepare the comprehensive schema
@@ -551,31 +549,31 @@ def extract_comprehensive_site_schema(site_url, specific_list=None, verbose=Fals
     
     # 1. Get site columns
     if verbose:
-        logging.info("Extracting site columns...")
+        log_utils.info("Extracting site columns...")
     site_columns = get_site_columns(token, site_id)
     comprehensive_schema["site_columns"] = site_columns
     if verbose:
-        logging.info(f"Found {len(site_columns)} site columns")
+        log_utils.info("Found {} site columns", len(site_columns))
     
     # 2. Get content types
     if verbose:
-        logging.info("Extracting content types...")
+        log_utils.info("Extracting content types...")
     content_types = get_content_types(token, site_id)
     comprehensive_schema["content_types"] = content_types
     if verbose:
-        logging.info(f"Found {len(content_types)} content types")
+        log_utils.info("Found {} content types", len(content_types))
     
     # 3. Get site features
     if verbose:
-        logging.info("Extracting site features...")
+        log_utils.info("Extracting site features...")
     features = get_site_features(token, site_id)
     comprehensive_schema["features"] = features
     if verbose:
-        logging.info(f"Found {len(features)} site features/properties")
+        log_utils.info("Found {} site features/properties", len(features))
     
     # 4. Get lists and their settings
     if verbose:
-        logging.info("Extracting lists and libraries...")
+        log_utils.info("Extracting lists and libraries...")
     
     lists = get_lists(token, site_id)
     
@@ -584,10 +582,10 @@ def extract_comprehensive_site_schema(site_url, specific_list=None, verbose=Fals
         filtered_lists = [l for l in lists if l.get('displayName') == specific_list]
         if not filtered_lists:
             if verbose:
-                logging.error(f"List '{specific_list}' not found")
-                logging.info("Available lists:")
+                log_utils.error("List '{}' not found", specific_list)
+                log_utils.info("Available lists:")
                 for lst in lists:
-                    logging.info(f"  - {lst.get('displayName')}")
+                    log_utils.info("  - {}", lst.get('displayName'))
             return None
         lists = filtered_lists
     
@@ -597,7 +595,7 @@ def extract_comprehensive_site_schema(site_url, specific_list=None, verbose=Fals
         list_name = lst.get('displayName')
         
         if verbose:
-            logging.info(f"Processing list: {list_name}")
+            log_utils.info("Processing list: {}", list_name)
         
         # Get detailed list settings
         list_settings = get_list_settings(token, site_id, list_id)

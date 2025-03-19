@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# file: workflows/common/find_libraries.py
 import sys
 import os
 import argparse

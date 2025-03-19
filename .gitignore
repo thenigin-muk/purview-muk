@@ -23,4 +23,4 @@ __init__.py
 # Security-related exclusions
 /api_modules/
 /.env.*
-/security_config.json
+/GraphAPI_config.json
