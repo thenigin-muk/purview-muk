@@ -1,0 +1,127 @@
+# Microsoft Graph API Usage Guide
+
+This guide explains how to use **auto-generated API modules** to make Microsoft Graph API requests.
+
+**Before You Begin**
+- Ensure the **Graph API Setup** is complete.
+- Ensure you have a valid API module (e.g., `api_modules/sharepoint`).
+- Ensure credentials exist in `.env.[app-name].secret`.
+
+---
+
+# 📌 **1. Importing the API Client**
+Each module follows a **standardized pattern**. Example:
+
+```python
+from api_modules.sharepoint import get_client
+
+# Get the SharePoint API client
+client = get_client()
+
+# Get an access token
+token = client.get_access_token()
+print(token)
+```
+
+If the token fails, check:
+```bash
+cat logs/graphapi_auth.log
+```
+
+---
+
+# 📌 **2. Making API Requests**
+
+### **2.1 GET Requests**
+Retrieve user details:
+```python
+response = client.make_api_request("get", "/me")
+print(response)
+```
+
+List Teams:
+```python
+teams = client.make_api_request("get", "/teams")
+print(teams)
+```
+
+---
+
+### **2.2 POST Requests**
+Send an email via Microsoft Graph API:
+```python
+email_data = {
+    "message": {
+        "subject": "Test Email",
+        "body": {"contentType": "Text", "content": "Hello from Graph API"},
+        "toRecipients": [{"emailAddress": {"address": "user@example.com"}}]
+    }
+}
+
+client.make_api_request("post", "/me/sendMail", data=email_data)
+```
+
+Create a SharePoint site:
+```python
+site_data = {
+    "displayName": "Test Site",
+    "webUrl": "https://contoso.sharepoint.com/sites/testsite"
+}
+
+client.make_api_request("post", "/sites", data=site_data)
+```
+
+---
+
+### **2.3 PATCH Requests**
+Update a user profile:
+```python
+update_data = {
+    "displayName": "Updated Name"
+}
+
+client.make_api_request("patch", "/me", data=update_data)
+```
+
+---
+
+### **2.4 DELETE Requests**
+Delete a Microsoft 365 group:
+```python
+client.make_api_request("delete", "/groups/{group-id}")
+```
+
+---
+
+# 📌 **3. Handling Authentication Errors**
+If authentication fails:
+1. **Check if secrets are valid**: Run
+    ```python
+    print(client.get_access_token())
+    ```
+2. **Check if the app has required permissions** in Entra ID.
+3. **Ensure the secret is not expired** (see secret rotation below).
+
+---
+
+# 📌 **4. Rotating Secrets**
+Graph API secrets expire periodically. To rotate:
+
+```bash
+python setup_graphapi.py --rotate-secret [app-name]
+```
+
+Update `.env.[app-name].secret` with new values.
+
+---
+
+# 📌 **5. Summary**
+- **Use `get_client()` to access an API module.**
+- **Use `make_api_request(method, endpoint, data)` to interact with Microsoft services.**
+- **Keep secrets secure in `.env` files.**
+- **Rotate secrets periodically** using `--rotate-secret`.
+
+For additional debugging, check:
+```bash
+cat logs/graphapi_usage.log
+```

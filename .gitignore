@@ -24,3 +24,6 @@ __init__.py
 /api_modules/
 /.env.*
 /GraphAPI_config.json
+.secrets/
+/.secrets/*
+/logs/*.log

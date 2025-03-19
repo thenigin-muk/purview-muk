@@ -88,7 +88,7 @@ class GraphAPIOrchestrator:
         print("\n====== MASTER APP REGISTRATION SETUP ======")
         print("This will guide you through setting up a master app registration")
         print("that will be used to create and manage other app registrations.")
-        print("\n1. Go to Azure Portal > Azure Active Directory > App Registrations")
+        print("\n1. Go to Entra Admin Center > Applications > App Registrations")
         print("2. Click 'New registration'")
         print("3. Name it 'GraphAPI-Orchestrator-Master'")
         print("4. Select 'Accounts in this organizational directory only'")
@@ -530,10 +530,10 @@ TENANT_ID={self.config["tenant_id"]}
         
         #Start of module content
         module_content = f'''"""
-        {app_name.upper()} API Module
-        Auto-generated secure access module for {app_name} operations
-        Generated: {datetime.now().isoformat()}
-        """
+{app_name.upper()} API Module
+Auto-generated secure access module for {app_name} operations
+Generated: {datetime.now().isoformat()}
+"""
 import os
 import json
 from pathlib import Path
@@ -725,6 +725,53 @@ Alternatively, you can create a .env.{app_name}.secret file with these variables
     
         return True
 
+def rotate_client_secret(self, app_name):
+    """
+    Rotates the client secret for an existing app registration.
+    
+    Args:
+        app_name (str): The name of the app whose secret should be rotated.
+    
+    Returns:
+        dict: New secret details if successful, else None.
+    """
+    log_utils.info(f"Rotating secret for app: {app_name}")
+
+    # Ensure we have a valid token
+    if not self.token and not self.get_master_token():
+        return None
+
+    # Find the app registration in config
+    app_info = next((app for app in self.config["app_registrations"]
+                     if app["name"] == f"Automation-{app_name}"), None)
+
+    if not app_info:
+        log_utils.error(f"App registration '{app_name}' not found.")
+        print(f"❌ App registration '{app_name}' not found.")
+        return None
+
+    app_object_id = app_info["object_id"]
+
+    # Generate a new client secret
+    new_secret_info = self._create_client_secret(app_object_id, "Rotated-Secret")
+    if not new_secret_info:
+        log_utils.error(f"Failed to generate new secret for {app_name}.")
+        print(f"❌ Failed to generate new secret for {app_name}.")
+        return None
+
+    # Update stored credentials
+    self._save_app_secrets(app_name, app_info["client_id"], new_secret_info["value"])
+
+    # Update the expiration date in config
+    app_info["secret_expiry"] = new_secret_info["end_date"]
+    self._save_config()
+
+    log_utils.info(f"✅ Secret rotated for {app_name}. New expiry: {new_secret_info['end_date']}")
+    print(f"✅ Secret rotated for {app_name}. New expiry: {new_secret_info['end_date']}")
+
+    return new_secret_info
+
+
 # Main function to handle CLI arguments    
 
 def main():
@@ -736,6 +783,8 @@ def main():
     parser.add_argument("--permissions", nargs="+", help="Required API permissions")
     parser.add_argument("--generate-module", help="Generate a Python module for an app")
     parser.add_argument("--list-apps", action="store_true", help="List registered applications")
+    parser.add_argument("--rotate-secret", help="Rotate the client secret for an app")
+    parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     
     args = parser.parse_args()
     
@@ -767,7 +816,17 @@ def main():
             for perm in app.get('permissions', []):
                 print(f"  - {perm}")
             print("-" * 40)
-    
+
+    elif args.rotate_secret:
+        orchestrator.get_master_token()
+        orchestrator.rotate_client_secret(args.rotate_secret)
+
+    elif args.debug:
+        import logging
+        logging.basicConfig(level=logging.DEBUG)
+        log_utils.set_level(logging.DEBUG)
+        print("Debug logging enabled")
+
     else:
         parser.print_help()
 
