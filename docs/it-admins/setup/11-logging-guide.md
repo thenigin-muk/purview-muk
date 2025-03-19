@@ -75,6 +75,7 @@ log_utils.info("Processing item {} of {}", i, total)
 The Message Catalog
 Structure and Organization
 Messages are organized by component or function area:
+
 ```text
 Messages
 ├── Auth - Authentication-related messages
@@ -336,3 +337,7 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 ```
+
+---
+
+[⬅ Previous: 10 Troubleshooting](10-troubleshooting.md) | [Next: 2 Git Version Control ➡](2-git-version-control.md)

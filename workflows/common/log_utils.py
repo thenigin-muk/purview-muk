@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# file: workflows/common/log_utils.py
+
 """
 Centralized logging utilities for the Purview-MUK project.
 This module provides a consistent logging approach across the entire project.
