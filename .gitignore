@@ -1,5 +1,7 @@
 *.sh
 *.txt
+*.log
+*.env
 
 # Allow specific shell scripts
 !update-itadmin-setup-guides.sh
@@ -10,4 +12,15 @@
 .venv/
 __pycache__/
 *.pyc
-*.pyo
+*.pyo.env
+.vscode/
+__init__.py
+
+# GraphAPI orchestrator secrets
+.env.master
+.env.*.secret
+
+# Security-related exclusions
+/api_modules/
+/.env.*
+/security_config.json
