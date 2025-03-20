@@ -1,3 +1,4 @@
+# Description: Utility functions to extract metadata schema from SharePoint sites and lists.
 #!/usr/bin/env python3
 # file: workflows/common/sp_metadata_utils.py
 import requests

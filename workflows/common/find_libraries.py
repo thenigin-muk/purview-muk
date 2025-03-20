@@ -1,3 +1,4 @@
+# Description: This script lists all document libraries in a SharePoint site.
 #!/usr/bin/env python3
 # file: workflows/common/find_libraries.py
 import sys

@@ -27,3 +27,14 @@ __init__.py
 .secrets/
 /.secrets/*
 /logs/*.log
+# Production credentials
+.env.production
+
+# GraphAPI secret files
+.env.purview-api.secret
+
+# GraphAPI secret files
+.env.purview_api.secret
+
+# GraphAPI secret files
+.env.purview.secret

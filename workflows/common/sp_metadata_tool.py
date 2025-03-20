@@ -1,3 +1,4 @@
+# Description: This script is used to extract metadata from SharePoint lists and libraries, compare against target schemas, and generate reports on differences.
 #!/usr/bin/env python3
 # file: workflows/common/sp_metadata_tool.py
 """
